@@ -17,7 +17,6 @@ Before doing anything, please make sure you have the following:
 
 ### Installing
 
-```
 After installing all the necessary software, open the folder where you will be working on your project. (For example, under the folder /www inside Mamp or Wamp)
 Once you are in your selected folder for the project, go to your project tab and in the "Clone or download" button, copy the HTTPS URL.
 After this, either in the console or your IDE's Version Control tool, clone the project files.
