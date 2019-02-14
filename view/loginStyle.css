@@ -6,9 +6,7 @@ body {
     padding-top: 20%;
 }
 
-.RegisterForm {
-    padding-top: 10%;
-}
+
 
 input[type=text], input[type=password] {
     width: 100%;
