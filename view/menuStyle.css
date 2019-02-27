@@ -1,0 +1,25 @@
+.tabMenu {
+    border: 1px solid dimgrey;
+    background-color: dimgray;
+}
+
+.tabMenu button {
+    background-color: dimgray;
+    float: left;
+    padding: 20px;
+    width: 25%;
+    border: black;
+    transition: 0.5s;
+    font-size: large;
+}
+
+.tabMenu button:hover {
+    background-color: darkgrey;
+}
+
+
+
+.category {
+    background-color: darkgrey;
+    padding: 10%;
+}
