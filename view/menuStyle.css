@@ -1,8 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .tabMenu {
     border: 1px solid dimgrey;
     background-color: dimgray;
     position: fixed;
-    width: 99%;
+    width: 100%;
 }
 
 .tabMenu button {
@@ -11,7 +16,6 @@
     padding: 20px;
     width: 25%;
     border: black;
-}
     transition: 0.5s;
     font-size: large;
 }
@@ -29,5 +33,5 @@ a.tabCategory {
 .category {
     background-color: darkgrey;
     padding: 10%;
-    margin-top: auto;
+    margin: 8px;
 }
