@@ -1,6 +1,8 @@
 .tabMenu {
     border: 1px solid dimgrey;
     background-color: dimgray;
+    position: fixed;
+    width: 99%;
 }
 
 .tabMenu button {
@@ -13,13 +15,18 @@
     font-size: large;
 }
 
+a.tabCategory {
+    text-decoration: none;
+    color: black;
+}
+
 .tabMenu button:hover {
     background-color: darkgrey;
 }
 
 
-
 .category {
     background-color: darkgrey;
     padding: 10%;
+    margin-top: auto;
 }
