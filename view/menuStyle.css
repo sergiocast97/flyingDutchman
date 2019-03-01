@@ -1,32 +1,37 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: dimgray;
+
+.tabMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
     position: fixed;
     width: 100%;
 }
 
-.tabMenu button {
-    background-color: dimgray;
+li {
     float: left;
-    padding: 20px;
     width: 25%;
-    border: black;
-    transition: 0.5s;
-    font-size: large;
 }
 
-a.tabCategory {
-    text-decoration: none;
+li a {
+    display: block;
     color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
 }
 
-.tabMenu button:hover {
+.tabCategory:hover {
     background-color: darkgrey;
 }
+
 
 
 .container {
@@ -39,11 +44,11 @@ a.tabCategory {
 
 .category {
     background-color: white;
-    height: 100%;
+    height: 60px;
     width: 100%;
     padding: 1%;
-    margin-top: 5px;
-    box-shadow: 2px;
+    margin-top: 10%;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
 }
 
 
@@ -63,7 +68,22 @@ a.tabCategory {
 
   .beers {
     display: inline-block;
+    position: relative;
   }
+
+  .front{
+    background-color: lightcoral;
+  }
+
+  .front:hover{
+    transform: rotateX(180deg);
+  }
+  
+  .back {
+      display: block;
+      
+  }
+
 
   .ciders {
     display: inline-block;
@@ -76,5 +96,4 @@ a.tabCategory {
   .wines {
     display: inline-block;
   }
-
 
