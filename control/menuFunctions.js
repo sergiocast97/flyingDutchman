@@ -1,23 +1,28 @@
-$("#tabBeers").click(function() {
+$(document).ready(function() {
+$("#tabBeers").click(function(e) {
     $('html, body').animate({
-        scrollTop: $("#Beers").offset().top
-    }, 2000);
+        scrollTop: $("#Beers_container").offset().top
+    }, 1000);
 });
 
-$("#tabCiders").click(function() {
+$("#tabCiders").click(function(e) {
+    e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#Ciders").offset().top
-    }, 2000);
+        scrollTop: $("#Ciders_container").offset().top
+    }, 1000);
 });
 
-$("#tabSpirits").click(function() {
+$("#tabSpirits").click(function(e) {
+    e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#Spirits").offset().top
-    }, 2000);
+    }, 1000);
 });
 
-$("#tabWines").click(function() {
+$("#tabWines").click(function(e) {
+    e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#Wines").offset().top
     }, 2000);
 });
+})

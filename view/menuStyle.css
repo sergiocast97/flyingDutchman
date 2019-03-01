@@ -29,8 +29,52 @@ a.tabCategory {
 }
 
 
-.category {
-    background-color: darkgrey;
-    padding: 10%;
-    margin: 8px;
+.container {
+    background-color: lightgrey;
+    padding: 5%;
+    margin-top: 10px;
+    font-family: Roboto Mono;
+    text-align: center;
 }
+
+.category {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+    margin-top: 5px;
+    box-shadow: 2px;
+}
+
+
+.horizontal-scrolling-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+ 
+  }
+
+  .horizontal-scrolling-wrapper > div {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+  }
+
+  .beers {
+    display: inline-block;
+  }
+
+  .ciders {
+    display: inline-block;
+  }
+
+  .spirits {
+    display: inline-block;
+  }
+
+  .wines {
+    display: inline-block;
+  }
+
+
