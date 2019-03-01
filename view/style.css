@@ -1,27 +1,82 @@
 * {
     margin:0;
     padding:0;
-    font-family: Sans-Serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body, html{
     height: 100%;
 }
 
-#background {
-    background: url("img/sea.jpg") #666666 no-repeat;
-    background-size: cover;
-    padding: auto 20px;
+h1 {
+    font-size: 20pt;
 }
 
-.loginForm {
+input {
+    border: none;
+    border-radius: 5px;
+    background-color: #DDD;
+    color: #333;
+    font-size: 12pt;
+    padding: 5px;
+    transition: 0.25s;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #BBB;
+    color: #333;
+    font-size: 12pt;
+    padding: 5px;
+}
+
+.button {
+    border: none;
+    background-color: #555;
+    color: #EEE;
+    transition: 0.25s;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.button:hover{
+    background-color: #444;
+}
+
+.button:focus{
+    outline: none;
+    background-color: #666;
+}
+
+.panel {
     position: fixed;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
-    background-color: #F0F0F1;
+    background-color: #FFF;
     border-radius: 5px;
     margin: auto;
+    padding: 25px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.panelElement {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between
+}
+
+#background {
+    background: url("img/stockholm.jpg") #666666 no-repeat;
+    background-size: cover;
+    padding: auto 20px;
 }

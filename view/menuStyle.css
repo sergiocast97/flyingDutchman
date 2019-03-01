@@ -6,12 +6,10 @@
 
 
 .tabMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: gray;
+    text-decoration: none;
+    background-color: black;
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -22,78 +20,33 @@ li {
 
 li a {
     display: block;
-    color: black;
+    color: darkgrey;
     text-align: center;
     padding: 20px;
     text-decoration: none;
 }
 
 .tabCategory:hover {
-    background-color: darkgrey;
+    background-color: gray;
 }
 
 
 
 .container {
-    background-color: lightgrey;
-    padding: 5%;
-    margin-top: 10px;
-    font-family: Roboto Mono;
-    text-align: center;
+    margin-top: 10%;
 }
+
 
 .category {
-    background-color: white;
-    height: 60px;
-    width: 100%;
-    padding: 1%;
-    margin-top: 10%;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
-}
-
-
-.horizontal-scrolling-wrapper {
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
- 
-  }
+    background-color: dimgray;
+    padding: 80px;
+    width: 100%;
+}
 
-  .horizontal-scrolling-wrapper > div {
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-  }
-
-  .beers {
+.item {
     display: inline-block;
-    position: relative;
-  }
-
-  .front{
-    background-color: lightcoral;
-  }
-
-  .front:hover{
-    transform: rotateX(180deg);
-  }
-  
-  .back {
-      display: block;
-      
-  }
-
-
-  .ciders {
-    display: inline-block;
-  }
-
-  .spirits {
-    display: inline-block;
-  }
-
-  .wines {
-    display: inline-block;
-  }
-
+    width: 30%;
+}
