@@ -33,7 +33,7 @@ li a {
 
 
 .container {
-    margin-top: 10%;
+    margin: 10%;
 }
 
 
@@ -43,7 +43,8 @@ li a {
     white-space: nowrap;
     background-color: dimgray;
     padding: 80px;
-    width: 100%;
+    width: 90%;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .item {
