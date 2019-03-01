@@ -6,12 +6,10 @@
 
 
 .tabMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: gray;
+    text-decoration: none;
+    background-color: black;
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -22,20 +20,33 @@ li {
 
 li a {
     display: block;
-    color: black;
+    color: darkgrey;
     text-align: center;
     padding: 20px;
     text-decoration: none;
 }
 
 .tabCategory:hover {
-    background-color: darkgrey;
+    background-color: gray;
 }
 
 
 
+.container {
+    margin-top: 10%;
+}
+
+
 .category {
-    padding: 200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
     background-color: dimgray;
-    margin: 15px;
+    padding: 80px;
+    width: 100%;
+}
+
+.item {
+    display: inline-block;
+    width: 30%;
 }
