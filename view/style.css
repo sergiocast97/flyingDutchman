@@ -16,7 +16,7 @@ input {
     border: none;
     border-radius: 5px;
     background-color: #DDD;
-    color: #333;
+    color: #222;
     font-size: 12pt;
     padding: 5px;
     transition: 0.25s;
@@ -27,7 +27,7 @@ input:focus {
     outline: none;
     border-radius: 5px;
     background-color: #BBB;
-    color: #333;
+    color: #222;
     font-size: 12pt;
     padding: 5px;
 }
@@ -75,8 +75,52 @@ input:focus {
     justify-content: space-between
 }
 
+.userBackground{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: /*url("img/rope.jpg")*/ #DDD no-repeat center bottom;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+}
+
+.userSettings {
+    display: flex;
+    justify-content: flex-end
+}
+
+.userInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end; 
+}
+
+.userPic img {
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.access {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #background {
-    background: url("img/stockholm.jpg") #666666 no-repeat;
+    background: url("img/stockholm.jpg") #666 center no-repeat;
+    background-position: center;
     background-size: cover;
     padding: auto 20px;
 }
