@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.tabMenu {
+    text-decoration: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    color: darkgrey;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.tabCategory:hover {
+    background-color: gray;
+}
+
+
+.tabPanel {
+    margin: 90px;
+}
+
+.tabPanel ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: dimgray;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+
+.tabPanel ul li:hover {
+    color: white;
+    background: darkgrey;
+}
+
+.tabPanel ul li.active {
+    color: white;
+    background: darkgrey;
+}
+
+.tabPanel .panel {
+    display:none;
+    background: darkgrey;
+    border-radius: 0 0 10px 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 80px;
+    width: 90%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.tabPanel .panel.active {
+    display:block;
+}
+
+
