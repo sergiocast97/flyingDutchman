@@ -5,7 +5,11 @@
     <title>Menu Page</title>
     <link rel="stylesheet" href="view/menuStyle.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+>>>>>>> 3d36354cc77ef1c22cd682e32eeae655c9b6f6a5
     <script src="control/menuFunctions.js"></script>
     <script src="Dutchman%20Files/loader.js"></script>
 </head>
@@ -13,6 +17,7 @@
 
     <script src="menuFunctions.js"></script>
 
+<<<<<<< HEAD
 <header>
         <div class="tabMenu">
             <!-- As a link -->
@@ -35,69 +40,137 @@
           <h1 class="display-3">I like it smooth</h1>
         </div>
       </div>
+=======
+<body>
+    <ul class="tabMenu">
+        <li id="tabBeers"><a class="tabCategory" href="#beersPanel">Beers</a></li>
+        <li id="tabCiders"><a class="tabCategory" href="#cidersPanel">Ciders</a></li>
+        <li id="tabSpirits"><a class="tabCategory" href="#spiritsPanel">Spirits</a></li>
+        <li id="tabWines"><a class="tabCategory" href="#winesPanel">Wines</a></li>
+    </ul>
+>>>>>>> 3d36354cc77ef1c22cd682e32eeae655c9b6f6a5
 
     </div>
   </section>-->
 
-    <section class="container">
+    <div class="tabPanel" id="beersPanel">
         <h2>Beers</h2>
-    <div class="category" id="Beers">
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-    </div>
-    </section>
+        <ul class="tabs">
+            <li rel="stout" class="active">Stout</li>
+            <li rel="ale">Ale</li>
+            <li rel="lager">Lager</li>
+        </ul>
 
-    <section class="container">
+        <div id="stout" class="panel active">
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+        </div>
+        <div id="ale" class="panel">
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+        </div>
+        <div id="lager" class="panel">
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+        </div>
+    </div>
+
+
+    <div class="tabPanel" id="cidersPanel">
         <h2>Ciders</h2>
-    <div class="category"  id="Ciders">
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-    </div>
-    </section>
+        <ul class="tabs">
+            <li rel="pear" class="active">Pear ciders</li>
+            <li rel="apple">Apple ciders</li>
+        </ul>
 
-    <section class="container">
+        <div id="pear" class="panel active">
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+        </div>
+        <div id="apple" class="panel">
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+        </div>
+
+    </div>
+
+
+    <div class="tabPanel" id="spiritsPanel">
         <h2>Spirits</h2>
-    <div class="category" id="Spirits">
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-    </div>
-    </section>
+        <ul class="tabs">
+            <li rel="strong" class="active">Strong</li>
+            <li rel="medium">Medium</li>
+            <li rel="light">Light</li>
+        </ul>
 
-    <section class="container">
-        <h2>Wines</h2>
-    <div class="category" id="Wines">
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
-        <div class="item">Item</div>
+        <div id="strong" class="panel active">
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+        </div>
+        <div id="medium" class="panel">
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+        </div>
+        <div id="light" class="panel">
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+        </div>
     </div>
-    </section>
+
+    <div class="tabPanel" id="winesPanel">
+        <h2>Wines</h2>
+        <ul class="tabs">
+            <li rel="red" class="active">Red</li>
+            <li rel="white">White</li>
+            <li rel="rose">Rosè</li>
+        </ul>
+
+        <div id="red" class="panel active">
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+            content1<br/>
+        </div>
+        <div id="white" class="panel">
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+            content2<br/>
+        </div>
+        <div id="rose" class="panel">
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+            content3<br/>
+        </div>
+    </div>
 
 </body>
 </html>

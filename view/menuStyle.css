@@ -30,23 +30,53 @@ li a {
 }
 
 
+.tabPanel {
+    margin: 90px;
+}
 
-.container {
-    margin: 10%;
+.tabPanel ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: dimgray;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
 }
 
 
-.category {
+.tabPanel ul li:hover {
+    color: white;
+    background: darkgrey;
+}
+
+.tabPanel ul li.active {
+    color: white;
+    background: darkgrey;
+}
+
+.tabPanel .panel {
+    display:none;
+    background: darkgrey;
+    border-radius: 0 0 10px 10px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    background-color: dimgray;
     padding: 80px;
     width: 90%;
     box-shadow: 10px 10px 5px grey;
 }
 
+<<<<<<< HEAD
 .item {
     display: inline-block;
     width: 30%;
 }
+=======
+.tabPanel .panel.active {
+    display:block;
+}
+
+
+>>>>>>> 3d36354cc77ef1c22cd682e32eeae655c9b6f6a5
