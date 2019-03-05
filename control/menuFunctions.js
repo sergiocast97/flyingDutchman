@@ -1,24 +1,27 @@
-$("#tabBeers").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Beers").offset().top},
-    500, 'linear');
-});
+$(function() {
 
-$("#tabCiders").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Ciders").offset().top},
-        500, 'linear');
-});
+    $('.tabPanel .tabs li').on('click', function() {
 
-$("#tabSpirits").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Spirits").offset().top},
-        500, 'linear');
-});
+        var $panel = $(this).closest('.tabPanel');
 
-$("#tabWines").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Wines").offset().top},
-        500, 'linear');
-});
+        $panel.find('.tabs li.active').removeClass('active');
+        $(this).addClass('active');
 
+
+        var panelToShow = $(this).attr('rel');
+
+
+        $panel.find('.panel.active').slideUp(300, showNextPanel);
+
+
+        function showNextPanel() {
+            $(this).removeClass('active');
+
+            $('#'+panelToShow).slideDown(300, function() {
+                $(this).addClass('active');
+            });
+        }
+    });
+
+
+});
