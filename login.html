@@ -9,6 +9,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="view/style.css">
+    <script src="control/login.js"></script>
     
 </head>
 
@@ -21,15 +22,15 @@
         </div>
         
         <div class="panelElement">
-            <input name="username" type="text" placeholder="username">
+            <input name="username" type="text" placeholder="username" id="username">
         </div>
 
         <div class="panelElement">
-            <input name="password" type="password" placeholder="password">
+            <input name="password" type="password" placeholder="password" id="password">
         </div>
 
         <div class="panelElement">
-            <button class="button" type="submit">Login</button>
+            <button class="button" type="submit" id="submit" onclick="login()">Login</button>
             <a class="button" href="register">Register</a>
         </div>
     </div>
