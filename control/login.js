@@ -1,20 +1,22 @@
 //import "/Dutchman Files/DBLoaded";
 
-//TODO: Fix "DB is not defined in loader.js" and correct homepage for correct user
+//TODO: Correct homepage for correct user & catch exception if username does not exist
 
 function login(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-   // userDetails()
-   // {
+    var user = userDetails(username);
+    //console.log(user);
+
+
         //check if username and password is correct
         //if correct - redirected to your homepage
         //if wrong - reload login-page
 
-        if (username == DB.users.username && password == DB.users.password) {
+        if (user.includes(username) && user.includes(password)) {
             alert("Login successfully");
-            sessionStorage.setItem("user_id", DB.users.user_id);
+            sessionStorage.setItem("user_id", user[0]);
             console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("user_id"));
             window.location = "home.html";
 
@@ -23,5 +25,5 @@ function login(){
             window.location = "login.html";
 
         }
-   // }
+
 }
