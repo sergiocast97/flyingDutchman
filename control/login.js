@@ -16,8 +16,8 @@ function login(){
 
         if (user.includes(username) && user.includes(password)) {
             alert("Login successfully");
-            sessionStorage.setItem("user_id", user[0]);
-            console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("user_id"));
+            sessionStorage.setItem("username", user[1]);
+            console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("username"));
             window.location = "home.html";
 
         } else {

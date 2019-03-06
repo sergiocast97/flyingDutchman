@@ -9,7 +9,14 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="view/style.css">
-    
+    <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
+
+    <script src="Dutchman%20Files/Beverages.js"></script>
+    <script src="Dutchman%20Files/DBLoaded.js"></script>
+    <script src="Dutchman%20Files/loader.js"></script>
+    <script type = "text/javascript" src="control/loadFirstName.js"></script>
+    <script type = "text/javascript" src="control/loadLastName.js"></script>
+
 </head>
 
 <body>
@@ -20,7 +27,6 @@
 
         <div class="userSettings">
             <div>
-                SETTINGS
             </div>
             <div>
                 LANGUAGE
@@ -34,11 +40,15 @@
             </div>
             
             <div class="userDetails">
-                <div>
-                    NAME SURNAME
+                <div id="firstName">
+                    <script type="text/javascript">
+                        window.onload = document.getElementById("firstName").innerHTML = getFirstName();
+                    </script>
                 </div>
-                <div>
-                    BALANCE KRONOR
+                <div id="lastName">
+                    <script type="text/javascript">
+                        window.onload = document.getElementById("lastName").innerHTML = getLastName();
+                    </script>
                 </div>
             </div>
 
