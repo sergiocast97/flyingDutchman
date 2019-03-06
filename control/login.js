@@ -6,14 +6,16 @@ function login(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    userDetails()
-    {
+   // userDetails()
+   // {
         //check if username and password is correct
         //if correct - redirected to your homepage
         //if wrong - reload login-page
 
         if (username == DB.users.username && password == DB.users.password) {
             alert("Login successfully");
+            sessionStorage.setItem("user_id", DB.users.user_id);
+            console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("user_id"));
             window.location = "home.html";
 
         } else {
@@ -21,5 +23,5 @@ function login(){
             window.location = "login.html";
 
         }
-    }
+   // }
 }
