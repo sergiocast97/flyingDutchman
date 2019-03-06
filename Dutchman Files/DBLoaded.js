@@ -11,6 +11,16 @@ var DB = {
             "phone": "0704811411"
         },
         {
+            "user_id": "666",
+            "credentials": "0",
+            "password": "1234",
+            "username": "sergio",
+            "first_name": "Sergio",
+            "last_name": "Castillo",
+            "email": "sergiocast97@gmail.com",
+            "phone": "07492428722"
+        },
+        {
             "user_id": "28",
             "credentials": "3",
             "password": "b612f428e4a53386fdb98f6c2164c16c",
@@ -881,6 +891,10 @@ var DB = {
         {
             "user_id": "2",
             "creditSEK" : "300"
+        },
+        {
+            "user_id": "666",
+            "creditSEK" : "500"
         },
         {
             "user_id": "28",

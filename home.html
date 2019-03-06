@@ -8,49 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="view/style.css">
+    <link rel="stylesheet" href="view/index.css">
     <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
 
     <script src="Dutchman%20Files/Beverages.js"></script>
     <script src="Dutchman%20Files/DBLoaded.js"></script>
     <script src="Dutchman%20Files/loader.js"></script>
-    <script type = "text/javascript" src="control/loadFirstName.js"></script>
-    <script type = "text/javascript" src="control/loadLastName.js"></script>
+    <script type = "text/javascript" src="control/loadUserDetails.js"></script>
 
 </head>
 
 <body>
 
-    <div class="userBackground"> </div>
+    <div id="userBackground"> </div>
 
     <div class="user">
 
         <div class="userSettings">
-            <div>
-                <img src="view/img/icons/settings.svg" alt="Settings" height="100px" width="auto">
+            
+            <div class="languageSelection">
+                <img class="language" id="EN" src="view/img/icons/uk.svg" alt="EN">
+                <img class="language" id="SE" src="view/img/icons/se.svg" alt="SE">
             </div>
-            <div>
-                <img src="view/img/icons/uk.svg" alt="EN" height="100px" width="auto">
-                <img src="view/img/icons/se.svg" alt="SE" height="100px" width="auto">
-            </div>
+
+            <div class="settings">
+                    <img src="view/img/icons/settings.svg" alt="Settings">
+                </div>
+
         </div>
 
         <div class="userInfo">
 
             <div class="userPic">
-                <img src="view/img/user.png" alt="profile">
+                <img src="view/img/user1.png" alt="profile">
             </div>
+
+            <!--div id="userPic">
+                <img src="window.onload = document.getElementById('picture').innerHTML = getPicture();" alt="profile">
+            </div-->
             
             <div class="userDetails">
-                <div id="firstName">
-                    <script type="text/javascript">
-                        window.onload = document.getElementById("firstName").innerHTML = getFirstName();
-                    </script>
+                <div class="name">
+                    <div id="firstName">
+                        <script type="text/javascript">
+                            window.onload = document.getElementById("firstName").innerHTML = getFirstName();
+                        </script>
+                    </div>
+                    <div id="lastName">
+                        <script type="text/javascript">
+                            window.onload = document.getElementById("lastName").innerHTML = getLastName();
+                        </script>
+                    </div>
                 </div>
-                <div id="lastName">
+                <div id="balance">
                     <script type="text/javascript">
-                        window.onload = document.getElementById("lastName").innerHTML = getLastName();
-                    </script>
+                        window.onload = document.getElementById("balance").innerHTML = getBalance();
+                    </script> Kr
                 </div>
             </div>
 
@@ -59,9 +72,9 @@
     </div>
 
     <div class="access">
-        <a class="button" href="menuPage">Menu</a>
-        <a class="button" href="favourites">Favourites</a>
-        <a class="button" href="tray">Tray</a>
+        <button onclick="window.location.href='menuPage'">Menu</button>
+        <button onclick="window.location.href='fav'">Favourites</button>
+        <button onclick="window.location.href='tray'">Tray</button>
     </div>
 
 </body>

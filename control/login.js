@@ -15,14 +15,14 @@ function login(){
         //if wrong - reload login-page
 
         if (user.includes(username) && user.includes(password)) {
-            alert("Login successfully");
+            //alert("Login successfully");
             sessionStorage.setItem("username", user[1]);
             console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("username"));
-            window.location = "home.html";
+            window.location = "home";
 
         } else {
             alert("Login not successful");
-            window.location = "login.html";
+            window.location = "login";
 
         }
 
