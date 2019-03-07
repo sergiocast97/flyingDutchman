@@ -34,7 +34,7 @@ $(function () {
         e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
+            scrollTop: $($(this).attr('href')).offset().top - 185 //here adjusting the height since tab menu is "fixed on top
         }, 500, 'linear');
     });
 
