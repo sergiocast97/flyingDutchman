@@ -1,13 +1,11 @@
-//import "/Dutchman Files/DBLoaded";
 
-//TODO: Correct homepage for correct user & catch exception if username does not exist
+//TODO: catch exception if username does not exist
 
 function login(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
     var user = userDetails(username);
-    //console.log(user);
 
 
         //check if username and password is correct
@@ -15,9 +13,7 @@ function login(){
         //if wrong - reload login-page
 
         if (user.includes(username) && user.includes(password)) {
-            //alert("Login successfully");
             sessionStorage.setItem("username", user[1]);
-            console.log(document.getElementById("login").innerHTML = sessionStorage.getItem("username"));
             window.location = "home";
 
         } else {

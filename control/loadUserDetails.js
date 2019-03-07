@@ -8,11 +8,9 @@
  */
 function getFirstName(){
     var currentUser = sessionStorage.getItem("username");
-    console.log(currentUser);
 
     var loadUserDetails = userDetails(currentUser);
     var firstName = loadUserDetails[2];
-    console.log(firstName);
     return firstName;
 
 }
@@ -22,11 +20,9 @@ function getFirstName(){
  */
 function getLastName(){
     var currentUser = sessionStorage.getItem("username");
-    console.log(currentUser);
 
     var loadUserDetails = userDetails(currentUser);
     var lastName = loadUserDetails[3];
-    console.log(lastName);
     return lastName;
 
 }
@@ -36,11 +32,9 @@ function getLastName(){
  */
 function getBalance(){
     var currentUser = sessionStorage.getItem("username");
-    console.log(currentUser);
 
     var loadUserDetails = userDetails(currentUser);
     var balance = loadUserDetails[6];
-    console.log(balance);
     return balance;
 
 }
