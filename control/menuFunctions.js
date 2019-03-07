@@ -12,13 +12,13 @@ $(function() {
         var panelToShow = $(this).attr('rel');
 
 
-        $panel.find('.panel.active').slideUp(300, showNextPanel);
+        $panel.find('.panel.active').slideUp(400, showNextPanel);
 
 
         function showNextPanel() {
             $(this).removeClass('active');
 
-            $('#'+panelToShow).slideDown(300, function() {
+            $('#'+panelToShow).slideDown(400, function() {
                 $(this).addClass('active');
             });
         }
