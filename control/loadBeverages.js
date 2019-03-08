@@ -15,7 +15,7 @@ function loadCider(){
         }
     }
     cider.sort();
-    return cider.toString();
+    return cider;
 }
 
 // Beers
@@ -49,7 +49,7 @@ function loadAle() {
     }
     ale.sort();
 
-    return ale.toString();
+    return ale;
 }
 
 function loadLager() {
@@ -65,7 +65,7 @@ function loadLager() {
     }
     lager.sort();
 
-    return lager.toString();
+    return lager;
 }
 
 //Wines
@@ -85,7 +85,7 @@ function loadRedWine() {
 
     redWine.sort();
 
-    return redWine.toString();
+    return redWine;
 }
 
 function loadWhiteWine() {
@@ -103,7 +103,7 @@ function loadWhiteWine() {
 
     whiteWine.sort();
 
-    return whiteWine.toString();
+    return whiteWine;
 }
 
 function loadRoseWine() {
@@ -120,7 +120,7 @@ function loadRoseWine() {
 
     roseWine.sort();
 
-    return roseWine.toString();
+    return roseWine;
 }
 
 // Spirits
@@ -139,5 +139,5 @@ function loadWhiskey() {
 
     whiskey.sort();
 
-    return whiskey.toString();
+    return whiskey;
 }

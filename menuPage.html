@@ -49,14 +49,30 @@
         <div id="ale" class="panel">
             <div id="loadAle">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadAle").innerHTML = loadAle();
+                    var ale = loadAle();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadAle').appendChild(ul);
+
+                    ale.forEach(function(ale){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += ale;
+                    });
                 </script>
             </div>
         </div>
         <div id="lager" class="panel">
             <div id="loadLager">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadLager").innerHTML = loadLager();
+                    var lager = loadLager();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadLager').appendChild(ul);
+
+                    lager.forEach(function(lager){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += lager;
+                    });
                 </script>
             </div>
         </div>
@@ -65,24 +81,20 @@
 
     <div class="tabPanel" id="cidersPanel">
         <h2>Ciders</h2>
-        <ul class="tabs">
-            <li rel="pear" class="active">Pear ciders</li>
-            <li rel="apple">Apple ciders</li>
-        </ul>
-
-        <div id="pear" class="panel active">
+        <div id="ciders" class="panel active">
             <div id="loadCider">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadCider").innerHTML = loadCider();
+                    var cider = loadCider();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadCider').appendChild(ul);
+
+                    cider.forEach(function(cider){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += cider;
+                    });
                 </script>
             </div>
-        </div>
-        <div id="apple" class="panel">
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
         </div>
 
     </div>
@@ -99,7 +111,15 @@
         <div id="whiskey" class="panel active">
             <div id="loadWhiskey">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadWhiskey").innerHTML = loadWhiskey();
+                    var whiskey = loadWhiskey();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadWhiskey').appendChild(ul);
+
+                    whiskey.forEach(function(whiskey){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += whiskey;
+                    });
                 </script>
             </div>
         </div>
@@ -130,21 +150,45 @@
         <div id="red" class="panel active">
             <div id="loadRedWine">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadRedWine").innerHTML = loadRedWine();
+                    var redWine = loadRedWine();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadRedWine').appendChild(ul);
+
+                    redWine.forEach(function(redWine){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += redWine;
+                    });
                 </script>
             </div>
         </div>
         <div id="white" class="panel">
             <div id="loadWhiteWine">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadWhiteWine").innerHTML = loadWhiteWine();
+                    var whiteWine = loadWhiteWine();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadWhiteWine').appendChild(ul);
+
+                    whiteWine.forEach(function(whiteWine){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += whiteWine;
+                    });
                 </script>
             </div>
         </div>
         <div id="rose" class="panel">
             <div id="loadRoseWine">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadRoseWine").innerHTML = loadRoseWine();
+                    var roseWine = loadRoseWine();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadRoseWine').appendChild(ul);
+
+                    roseWine.forEach(function(roseWine){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += roseWine;
+                    });
                 </script>
             </div>
         </div>

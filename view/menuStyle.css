@@ -60,7 +60,6 @@ li a {
     display:none;
     background: darkgrey;
     border-radius: 0 0 10px 10px;
-    overflow-x: scroll;
     overflow-y: scroll;
     white-space: nowrap;
     padding: 80px;
@@ -78,6 +77,7 @@ li a {
     display: block;
     border-radius: unset;
     margin: 1px;
+    overflow-y: scroll;
 }
 
 #loadStout li:hover {
@@ -88,3 +88,105 @@ li a {
     margin: 1px;
 }
 
+#loadAle li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadAle li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+#loadLager li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadLager li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+#loadCider li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadCider li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+
+#loadWhiteWine li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadWhiteWine li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+#loadRoseWine li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadRoseWine li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+#loadWhiskeyli {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+#loadWhiskey li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
