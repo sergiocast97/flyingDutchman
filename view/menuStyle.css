@@ -75,9 +75,8 @@ li a {
 #loadStout li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -89,9 +88,8 @@ li a {
 #loadAle li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -102,9 +100,8 @@ li a {
 #loadLager li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -115,9 +112,8 @@ li a {
 #loadCider li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -126,12 +122,11 @@ li a {
 }
 
 
-#loadRedWineWine li {
+#loadRedWine li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -142,9 +137,8 @@ li a {
 #loadWhiteWine li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -155,9 +149,8 @@ li a {
 #loadRoseWine li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
@@ -168,9 +161,8 @@ li a {
 #loadWhiskey li {
     background-color: dimgray;
     color: white;
-    display: block;
     border-radius: unset;
-    margin: 1px;
+    margin: 3px;
     overflow-y: scroll;
 }
 
