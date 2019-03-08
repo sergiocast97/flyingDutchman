@@ -64,6 +64,7 @@ li a {
     white-space: nowrap;
     padding: 80px;
     width: 90%;
+    height: 100px;
     box-shadow: 10px 10px 5px grey;
 }
 
@@ -83,9 +84,6 @@ li a {
 #loadStout li:hover {
     background-color: darkgrey;
     color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
 
 #loadAle li {
@@ -99,10 +97,6 @@ li a {
 
 #loadAle li:hover {
     background-color: darkgrey;
-    color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
 
 #loadLager li {
@@ -116,10 +110,6 @@ li a {
 
 #loadLager li:hover {
     background-color: darkgrey;
-    color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
 
 #loadCider li {
@@ -133,12 +123,21 @@ li a {
 
 #loadCider li:hover {
     background-color: darkgrey;
+}
+
+
+#loadRedWineWine li {
+    background-color: dimgray;
     color: white;
     display: block;
     border-radius: unset;
     margin: 1px;
+    overflow-y: scroll;
 }
 
+#loadRedWine li:hover {
+    background-color: darkgrey;
+}
 
 #loadWhiteWine li {
     background-color: dimgray;
@@ -151,10 +150,6 @@ li a {
 
 #loadWhiteWine li:hover {
     background-color: darkgrey;
-    color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
 
 #loadRoseWine li {
@@ -168,13 +163,9 @@ li a {
 
 #loadRoseWine li:hover {
     background-color: darkgrey;
-    color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
 
-#loadWhiskeyli {
+#loadWhiskey li {
     background-color: dimgray;
     color: white;
     display: block;
@@ -185,8 +176,4 @@ li a {
 
 #loadWhiskey li:hover {
     background-color: darkgrey;
-    color: white;
-    display: block;
-    border-radius: unset;
-    margin: 1px;
 }
