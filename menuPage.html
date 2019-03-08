@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="view/menuStyle.css">
     <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
     <script src="control/menuFunctions.js"></script>
-    <script src="Dutchman%20Files/loader.js"></script>
+
     <script src="Dutchman%20Files/Beverages.js"></script>
     <script src="Dutchman%20Files/DBLoaded.js"></script>
+    <script src="Dutchman%20Files/loader.js"></script>
+    <script type = "text/javascript" src="control/loadBeverages.js"></script>
 </head>
 
 
@@ -30,25 +32,25 @@
         </ul>
 
         <div id="stout" class="panel active">
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
+            <div id="loadStout">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadStout").innerHTML = loadStout();
+                </script>
+            </div>
         </div>
         <div id="ale" class="panel">
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
+            <div id="loadAle">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadAle").innerHTML = loadAle();
+                </script>
+            </div>
         </div>
         <div id="lager" class="panel">
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
+            <div id="loadLager">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadLager").innerHTML = loadLager();
+                </script>
+            </div>
         </div>
     </div>
 
@@ -61,11 +63,11 @@
         </ul>
 
         <div id="pear" class="panel active">
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
+            <div id="loadCider">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadCider").innerHTML = loadCider();
+                </script>
+            </div>
         </div>
         <div id="apple" class="panel">
             content2<br/>
@@ -81,17 +83,17 @@
     <div class="tabPanel" id="spiritsPanel">
         <h2>Spirits</h2>
         <ul class="tabs">
-            <li rel="strong" class="active">Strong</li>
+            <li rel="whiskey" class="active">Whiskey</li>
             <li rel="medium">Medium</li>
             <li rel="light">Light</li>
         </ul>
 
-        <div id="strong" class="panel active">
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
+        <div id="whiskey" class="panel active">
+            <div id="loadWhiskey">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadWhiskey").innerHTML = loadWhiskey();
+                </script>
+            </div>
         </div>
         <div id="medium" class="panel">
             content2<br/>
@@ -118,25 +120,25 @@
         </ul>
 
         <div id="red" class="panel active">
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
-            content1<br/>
+            <div id="loadRedWine">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadRedWine").innerHTML = loadRedWine();
+                </script>
+            </div>
         </div>
         <div id="white" class="panel">
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
+            <div id="loadWhiteWine">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadWhiteWine").innerHTML = loadWhiteWine();
+                </script>
+            </div>
         </div>
         <div id="rose" class="panel">
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
+            <div id="loadRoseWine">
+                <script type="text/javascript">
+                    window.onload = document.getElementById("loadRoseWine").innerHTML = loadRoseWine();
+                </script>
+            </div>
         </div>
     </div>
 
