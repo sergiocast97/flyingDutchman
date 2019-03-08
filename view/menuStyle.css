@@ -61,7 +61,7 @@ li a {
     background: darkgrey;
     border-radius: 0 0 10px 10px;
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: scroll;
     white-space: nowrap;
     padding: 80px;
     width: 90%;
@@ -72,4 +72,19 @@ li a {
     display:block;
 }
 
+#loadStout li {
+    background-color: dimgray;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
+
+#loadStout li:hover {
+    background-color: darkgrey;
+    color: white;
+    display: block;
+    border-radius: unset;
+    margin: 1px;
+}
 

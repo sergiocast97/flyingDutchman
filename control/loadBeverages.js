@@ -33,7 +33,7 @@ function loadStout() {
     }
     stout.sort();
 
-    return stout.toString();
+    return stout;
 }
 
 function loadAle() {

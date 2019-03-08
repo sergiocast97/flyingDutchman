@@ -34,7 +34,15 @@
         <div id="stout" class="panel active">
             <div id="loadStout">
                 <script type="text/javascript">
-                    window.onload = document.getElementById("loadStout").innerHTML = loadStout();
+                    var stout = loadStout();
+                    var ul = document.createElement('ul');
+                    document.getElementById('loadStout').appendChild(ul);
+
+                    stout.forEach(function(stout){
+                        var li = document.createElement('li');
+                        ul.appendChild(li);
+                        li.innerHTML += stout;
+                    });
                 </script>
             </div>
         </div>
