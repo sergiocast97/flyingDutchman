@@ -132,7 +132,7 @@ button:focus{
 }
 
 .user {
-    background: url("img/light.jpg") #DDD no-repeat center center;
+    background: url("img/stockholm.jpg") #DDD no-repeat center center;
     border-radius: 5px 5px 0 0;
     background-size: cover;
     height: 70%;
@@ -335,7 +335,7 @@ button:focus{
  */
 
 #background {
-    background: url("img/stockholm.jpg") #DDD center no-repeat;
+    background: url("img/light.jpg") #DDD center no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
