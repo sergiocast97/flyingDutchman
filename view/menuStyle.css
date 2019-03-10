@@ -68,15 +68,8 @@ li a {
     box-shadow: 10px 10px 5px grey;
 }
 
-<<<<<<< HEAD
-.item {
-    display: inline-block;
-    width: 30%;
-}
-=======
 .tabPanel .panel.active {
     display:block;
 }
 
 
->>>>>>> 3d36354cc77ef1c22cd682e32eeae655c9b6f6a5

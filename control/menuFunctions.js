@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 $(document).ready(function() {
 $("#tabBeers").click(function(e) {
     $('html, body').animate({
@@ -28,7 +26,7 @@ $("#tabWines").click(function(e) {
     }, 2000);
 });
 })
-=======
+
 $("#tabBeers").click(function() {
     $('html,body').animate({
             scrollTop: $("#Beers").offset().top},
@@ -52,10 +50,9 @@ $("#tabWines").click(function() {
             scrollTop: $("#Wines").offset().top},
         500, 'linear');
 });
->>>>>>> 1ce2b36e885c4be204a62b7dcd4ada8d87b86538
-=======
+
 $(function() {
->>>>>>> 3d36354cc77ef1c22cd682e32eeae655c9b6f6a5
+
 
     $('.tabPanel .tabs li').on('click', function() {
 
@@ -68,7 +65,7 @@ $(function() {
         var panelToShow = $(this).attr('rel');
 
 
-        $panel.find('.panel.active').slideUp(300, showNextPanel);
+        $panel.find('.panel.active').slideUp(300, swing, showNextPanel);
 
 
         function showNextPanel() {
