@@ -107,7 +107,7 @@ function loadWhiteWine() {
 
 
     whiteWine  = whiteWine.slice(0, 10);
-    window.sort();
+    whiteWine.sort();
 
     return whiteWine;
 }
