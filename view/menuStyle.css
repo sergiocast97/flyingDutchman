@@ -1,6 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url("img/stockholm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
@@ -19,14 +27,14 @@ li {
 
 li a {
     display: block;
-    color: darkgrey;
+    color: #EEE;
     text-align: center;
     padding: 20px;
     text-decoration: none;
 }
 
 .tabCategory:hover {
-    background-color: gray;
+    background-color: #444;
 }
 
 
@@ -37,28 +45,29 @@ li a {
 .tabPanel ul li {
     list-style-type: none;
     display: inline-block;
-    background: dimgray;
     padding: 3px 10px;
     border-radius: 10px 10px 0 0;
-    color: white;
-    font-weight: 200;
+    background-color: #444;
+    color: #EEE;
+    font-weight: 500;
     cursor: pointer;
 }
 
 
 .tabPanel ul li:hover {
-    color: white;
-    background: darkgrey;
+    background: #BBB;
+    color: #222;
 }
 
 .tabPanel ul li.active {
-    color: white;
-    background: darkgrey;
+    background: #BBB;
+    color: #222;
 }
 
 .tabPanel .panel {
     display:none;
-    background: darkgrey;
+    background: #BBB;
+    color: #222;
     border-radius: 0 0 10px 10px;
     overflow-y: scroll;
     white-space: nowrap;
@@ -73,99 +82,98 @@ li a {
 }
 
 #loadStout li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadStout li:hover {
-    background-color: darkgrey;
-    color: white;
+    background-color: #555;
 }
 
 #loadAle li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadAle li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 #loadLager li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadLager li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 #loadCider li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadCider li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 
 #loadRedWine li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadRedWine li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 #loadWhiteWine li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadWhiteWine li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 #loadRoseWine li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadRoseWine li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
 
 #loadWhiskey li {
-    background-color: dimgray;
-    color: white;
+    background-color: #444;
+    color: #EEE;
     border-radius: unset;
     margin: 3px;
     overflow-y: scroll;
 }
 
 #loadWhiskey li:hover {
-    background-color: darkgrey;
+    background-color: #555;
 }
