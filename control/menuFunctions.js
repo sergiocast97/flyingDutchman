@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
 $("#tabBeers").click(function(e) {
     $('html, body').animate({
@@ -51,6 +52,9 @@ $("#tabWines").click(function() {
         500, 'linear');
 });
 
+=======
+//Function to switch panel
+>>>>>>> 067b9c628b49cbafd8012c6d7a8e956784431769
 $(function() {
 
 
@@ -65,13 +69,17 @@ $(function() {
         var panelToShow = $(this).attr('rel');
 
 
+<<<<<<< HEAD
         $panel.find('.panel.active').slideUp(300, swing, showNextPanel);
+=======
+        $panel.find('.panel.active').slideUp(400, showNextPanel);
+>>>>>>> 067b9c628b49cbafd8012c6d7a8e956784431769
 
 
         function showNextPanel() {
             $(this).removeClass('active');
 
-            $('#'+panelToShow).slideDown(300, function() {
+            $('#'+panelToShow).slideDown(400, function() {
                 $(this).addClass('active');
             });
         }
@@ -79,3 +87,17 @@ $(function() {
 
 
 });
+
+
+//Scroll to div function
+$(function () {
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 185 //here adjusting the height since tab menu is 'fixed' on top
+        }, 500, 'linear');
+    });
+
+});
+

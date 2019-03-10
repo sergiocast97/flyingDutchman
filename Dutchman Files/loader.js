@@ -55,12 +55,14 @@ function userDetails(userName) {
         DB.users[userIndex].first_name,
         DB.users[userIndex].last_name,
         DB.users[userIndex].email,
+        DB.users[userIndex].password,
 
         account
     );
 
     return userCollect;
 }
+
 
 // =====================================================================================================
 // This function will change the credit amount in the user's account. Note that the amount given as argument is the new

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check out Page</title>
+    <link rel="stylesheet" href="view/checkoutStyle.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="checkOutFunctions.js"></script>
+
+    <script>
+    function inputDisplay(x){
+     if(x == 0){
+      document.getElementById('credit-field').style.display='none';
+      document.getElementById('card-field').style.display='flex';
+      document.getElementById('credit-panel-footer').style.display='none';
+      document.getElementById('card-panel-footer').style.display='flex';
+       alert("1111111");
+      
+     }
+     else{
+      document.getElementById('credit-field').style.display='flex';
+      document.getElementById('card-field').style.display='none';
+      document.getElementById('credit-panel-footer').style.display='flex';
+      document.getElementById('card-panel-footer').style.display='none';
+      alert("3333333");
+      
+     }
+    }
+    </script>
+</head>
+
+<body>
+  <div class="checkout-panel">
+    <div class="panel-body">
+      <h2 class="title">Checkout</h2>
+   
+      <div class="progress-bar">
+        <!--<div class="step active"></div>-->
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+   
+      <div class="payment-method">
+
+        <label for="card" class="method card">
+          <div class="card-logos">
+            <img src="img/visa_logo.png"/>
+            <img src="img/mastercard_logo.png"/>
+          </div>
+   
+          <div class="radio-input">
+            <input id="card" type="radio" name="payment" onclick="inputDisplay(0)" checked>
+            Pay with credit card
+          </div>
+        </label>
+   
+        <!--<label for="swish" class="method swish">
+          <div class="swish-logo">
+          <img src="img/swish_logo.png"/>
+        </div>
+
+          <div class="radio-input">
+            <input id="swish" type="radio" name="payment" onclick="inputDisplay(1)">
+            Pay with Swish
+          </div>
+        </label>-->
+
+        <label for="credit" class="method credit">
+            <div class="credit-logo">
+            <img src="img/credit_logo.png"/>
+          </div>
+          
+            <div class="radio-input">
+              <input id="credit" type="radio" name="payment" onclick="inputDisplay(2)">
+              Pay with Credit
+            </div>
+          </label>
+      </div>
+   
+       <!--input-field for card payment-->
+      <div class="input-fields" id="card-field" >
+      
+        <div class="column-1">
+          <label for="cardholder">Cardholder's Name</label>
+          <input type="text" id="cardholder" />
+   
+          <div class="small-inputs">
+            <div>
+              <label for="date">Valid thru</label>
+              <input type="text" id="date" placeholder="MM / YY" />
+            </div>
+   
+            <div>
+              <label for="verification">CVV / CVC *</label>
+              <input type="password" id="verification"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="column-2">
+          <label for="cardnumber">Card Number</label>
+          <input type="password" id="cardnumber"/>
+   
+          <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+        
+        </div>
+
+      </div>
+
+             <!--input-field for Credit payment-->
+      <div class="input-fields" id="credit-field" >
+        <div class="column-1">
+          <div class="chargeCredit">
+            <label for="Current credit">Your Current Credit is XXX</label>
+          </div> 
+        </div>
+      </div>
+
+    </div>
+   
+    <div class="panel-footer" id="card-panel-footer">
+      <button class="btn back-btn">Back</button>
+      <button class="btn next-btn">Confirm Payment</button>
+    </div>
+
+    <div class="panel-footer" id="credit-panel-footer">
+        <button class="btn back-btn">Back</button>
+        <button class="btn charge-btn">Charge</button>
+        <button class="btn next-btn">Confirm Payment</button>
+      </div>
+
+    </div>
+  </body>
