@@ -252,18 +252,12 @@ button:focus{
     
 }
 
-.tabItem {
+.tabCategory {
     width: 100%;
     padding: 20px;
     text-align: center;
     transition: 0.25s;
-}
 
-.tabItem:hover {
-    background-color: #EEE;
-}
-
-.tabCategory {
     font-size: 16pt;
     text-decoration: none;
     color: #222;
@@ -272,6 +266,7 @@ button:focus{
 
 .tabCategory:hover {
     color: #444;
+    background-color: #EEE;
 }
 
 /* Drinks panel */
@@ -284,7 +279,7 @@ button:focus{
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.tabPanel ul li {
+.tabs li {
     list-style-type: none;
     display: inline-block;
     padding: 5px 10px;
@@ -297,36 +292,46 @@ button:focus{
     transition: 0.25s;
 }
 
-.tabPanel ul li:hover {
+.tabs li:hover {
     background: #AAA;
 }
 
-.tabPanel ul li.active {
+.tabs li.active {
     background: #FFF;
     color: #222;
+    padding: 0;
 }
 
-.tabPanel .drinkPanel {
+.drinkPanel {
     height: 200px;
     display:none;
     color: #222;
-    white-space: pre-line;
     overflow-y: scroll;
 }
 
-.tabPanel .drinkPanel.active {
+.drinkPanel.active {
     display:block;
 }
 
-.loadDrink li {
-    background-color: #444;
-    color: #EEE;
-    border-radius: unset;
-    margin: 3px;
+.loadDrink ul li {
+    list-style-type: none;
+    display: inline-block;
+
+    padding: 5px 10px;
+    margin: 5px 10px;
+    margin-left: 0;
+    width: 22%;
+    border-radius: 5px;
+
+    background-color: #EEE;
+    color: #222;
+    border-radius: 5px;
+    transition: 0.25s;
 }
 
 .loadDrink li:hover {
-    background-color: #555;
+    background-color: #DDD;
+    color: #333;
 }
 
 /**
@@ -352,7 +357,7 @@ button:focus{
 }
 
 #space{
-    padding: 350px 0;
+    padding: 400px 0;
 }
 
 /*
