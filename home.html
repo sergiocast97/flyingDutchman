@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>The Flying Dutchman - Login</title>
+    <title>The Flying Dutchman - Home</title>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,67 +14,62 @@
     <script src="Dutchman%20Files/Beverages.js"></script>
     <script src="Dutchman%20Files/DBLoaded.js"></script>
     <script src="Dutchman%20Files/loader.js"></script>
-    <script type = "text/javascript" src="control/loadUserDetails.js"></script>
+    <script src="control/userLoader.js"></script>
 
 </head>
 
 <body>
 
-    <div id="userBackground"> </div>
+    <div class="homepage">
 
-    <div class="user">
+        <div id="userBackground"> </div>
 
-        <div class="userSettings">
-            
-            <div class="languageSelection">
-                <img class="language" id="EN" src="view/img/icons/uk.svg" alt="EN">
-                <img class="language" id="SE" src="view/img/icons/se.svg" alt="SE">
-            </div>
-
-            <div class="settings">
-                    <img src="view/img/icons/settings.svg" alt="Settings">
+        <div class="user">
+    
+            <div class="userSettings">
+                
+                <div class="languageSelection">
+                    <img class="language" id="EN" src="view/img/icons/uk.svg" alt="EN">
+                    <img class="language" id="SE" src="view/img/icons/se.svg" alt="SE">
                 </div>
-
-        </div>
-
-        <div class="userInfo">
-
-            <div class="userPic">
-                <img src="view/img/user1.png" alt="profile">
-            </div>
-
-            <!--div id="userPic">
-                <img src="window.onload = document.getElementById('picture').innerHTML = getPicture();" alt="profile">
-            </div-->
-            
-            <div class="userDetails">
-                <div class="name">
-                    <div id="firstName">
-                        <script type="text/javascript">
-                            window.onload = document.getElementById("firstName").innerHTML = getFirstName();
-                        </script>
+    
+                <div class="settings">
+                        <img src="view/img/icons/settings.svg" alt="Settings">
                     </div>
-                    <div id="lastName">
-                        <script type="text/javascript">
-                            window.onload = document.getElementById("lastName").innerHTML = getLastName();
-                        </script>
-                    </div>
-                </div>
-                <div id="balance">
-                    <script type="text/javascript">
-                        window.onload = document.getElementById("balance").innerHTML = getBalance();
-                    </script> Kr
-                </div>
+    
             </div>
-
+    
+            <div class="userInfo">
+    
+                <img id="userPic" src="view/img/user1.png" alt="Profile Picture">
+                
+                <div class="userDetails">
+    
+                    <div id="name">
+                        <!-- Name is loaded here -->
+                    </div>
+    
+                    <div id="balance">
+                        <!-- Balance is loaded here -->
+                    </div>
+    
+                </div>
+    
+            </div>
+    
         </div>
-
-    </div>
-
-    <div class="access">
-        <button onclick="window.location.href='menuPage'">Menu</button>
-        <button onclick="window.location.href='fav'">Favourites</button>
-        <button onclick="window.location.href='tray'">Tray</button>
+    
+        <div class="access">
+            <div class="accessItem">
+                <a href="menuPage">Menu</a>
+            </div>
+            <div class="accessItem">
+                <a href="fav">Favourites</a>
+            </div>
+            <div class="accessItem">
+                <a href="tray">Tray</a>
+            </div>
+        </div>
     </div>
 
 </body>

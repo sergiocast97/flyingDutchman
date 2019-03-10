@@ -27,6 +27,7 @@ input {
     font-size: 12pt;
     padding: 5px;
     transition: 0.25s;
+    /*box-shadow: inset 0 6px 20px 0 rgba(0, 0, 0, 0.2);*/
 }
 
 input:focus {
@@ -71,6 +72,7 @@ button:focus{
 
     font-size: 40px;
     font-weight: bolder;
+    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     color: #FFF;
 
     animation-duration: 1s;
@@ -103,6 +105,13 @@ button:focus{
 .panelElement {
     margin: 10px 0;
     display: flex;
+    justify-content: space-between;
+}
+
+.homepage{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -161,22 +170,48 @@ button:focus{
     align-items:flex-end; 
 }
 
-.userPic img {
-    width: 200px;
+#userPic {
+    width: 150px;
     height: auto;
     border-radius: 100%;
+    border: 5px solid #FFF;
 }
 
 .userDetails {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.userDetails #name{
+    font-size: 40px;
+    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+}
+
+.userDetails #balance{
+    font-size: 30px;
+    color: #333;
 }
 
 .access {
+    height: 40%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
+
+.accessItem {
+    width: 100%;
+    text-align: center;
+}
+
+.accessItem a{
+    text-decoration: none;
+    color: black;
+
+}
+
 
 
 /**
@@ -200,6 +235,7 @@ button:focus{
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 /**

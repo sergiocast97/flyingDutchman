@@ -38,3 +38,26 @@ function getBalance(){
     return balance;
 
 }
+
+/**
+ * Get user's profile picture
+ */
+function getPicture(){
+    var currentUser = sessionStorage.getItem("username");
+
+    var loadUserDetails = userDetails(currentUser);
+    var picture = loadUserDetails[666];
+    return picture;
+
+}
+
+/**
+ * Load the user data on Homepage
+ */
+$(function() {
+
+    $('#name').append(getFirstName() + " " + getLastName());
+    $('#balance').append(getBalance() + "Kr");
+    $("#userPic").attr("src", getPicture());
+
+});
