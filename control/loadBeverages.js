@@ -31,6 +31,8 @@ function loadStout(){
             stout.push(all[i][0]);
         }
     }
+
+    stout = stout.slice(20, 37);
     stout.sort();
 
     return stout;
@@ -47,6 +49,7 @@ function loadAle(){
             ale.push(all[i][0]);
         }
     }
+    ale  = ale.slice(20, 37);
     ale.sort();
 
     return ale;
@@ -63,6 +66,7 @@ function loadLager(){
             lager.push(all[i][0]);
         }
     }
+    lager  = lager.slice(20, 37);
     lager.sort();
 
     return lager;
@@ -83,6 +87,7 @@ function loadRedWine() {
         }
     }
 
+    redWine  = redWine.slice(20, 37);
     redWine.sort();
 
     return redWine;
@@ -101,7 +106,8 @@ function loadWhiteWine() {
     }
 
 
-    whiteWine.sort();
+    whiteWine  = whiteWine.slice(0, 10);
+    window.sort();
 
     return whiteWine;
 }
@@ -118,6 +124,7 @@ function loadRoseWine() {
         }
     }
 
+    roseWine  = roseWine.slice(20, 37);
     roseWine.sort();
 
     return roseWine;
@@ -137,6 +144,7 @@ function loadWhiskey() {
         }
     }
 
+    whiskey  = whiskey.slice(20, 37);
     whiskey.sort();
 
     return whiskey;

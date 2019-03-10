@@ -6,7 +6,6 @@ function addToTray(){
 
     tray.forEach(function(item) {
         var li = document.createElement("li");
-        li.innerHTML =
 
     })
 };
