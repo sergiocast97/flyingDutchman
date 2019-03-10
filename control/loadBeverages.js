@@ -20,7 +20,7 @@ function loadCider(){
 
 // Beers
 
-function loadStout() {
+function loadStout(){
 
     var all = allBeverages();
     var stout = [];
@@ -36,7 +36,7 @@ function loadStout() {
     return stout;
 }
 
-function loadAle() {
+function loadAle(){
 
     var all = allBeverages();
     var ale = [];
@@ -52,7 +52,7 @@ function loadAle() {
     return ale;
 }
 
-function loadLager() {
+function loadLager(){
 
     var all = allBeverages();
     var lager = [];
