@@ -1,11 +1,13 @@
 function addToTray(){
 
-    var itemID = document.getElementById("productID").value;
+    var ul = document.getElementById("stout");
+    var product = document.getElementById("listItem");
+    var li = document.createElement("li");
 
-    var tray = [];
+    li.setAttribute('id', product);
+    li.appendChild(document.createTextNode(product));
+    ul.appendChild(li);
+    console.log(ul);
+    console.log(li);
 
-    tray.forEach(function(item) {
-        var li = document.createElement("li");
-
-    })
 };
