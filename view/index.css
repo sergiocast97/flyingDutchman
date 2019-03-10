@@ -66,12 +66,14 @@ button:focus{
  * Styling for different divs
  */
 
+
+
+/* Welcome page */
 .welcome {
     align-self: center;
     margin: 0 auto;
 
     font-size: 40px;
-    font-weight: bolder;
     text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     color: #FFF;
 
@@ -85,6 +87,7 @@ button:focus{
     text-align: center;
 }
 
+/* Login And Register */
 .panel {
     align-self: center;
     margin: 0 auto;
@@ -108,6 +111,7 @@ button:focus{
     justify-content: space-between;
 }
 
+/* User Homepage */
 .homepage{
     align-self: center;
     margin: 0 auto;
@@ -217,10 +221,100 @@ button:focus{
 .accessItem a{
     text-decoration: none;
     color: black;
-
 }
 
+/* Menu page */
 
+.tabMenu {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: #FFF;
+    list-style-type: none;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    
+}
+
+.tabItem {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.tabItem:hover {
+    background-color: #EEE;
+}
+
+.tabCategory {
+    font-size: 16pt;
+    text-decoration: none;
+    color: #222;
+    transition: 0.25s;
+}
+
+.tabCategory:hover {
+    color: #444;
+}
+
+/* Drinks panel */
+.tabPanel {
+    padding: 25px;
+    margin: 20px;
+
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tabPanel ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #777;
+    color: #FFF;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.tabPanel ul li:hover {
+    background: #AAA;
+}
+
+.tabPanel ul li.active {
+    background: #FFF;
+    color: #222;
+}
+
+.tabPanel .drinkPanel {
+    height: 200px;
+    display:none;
+    color: #222;
+    white-space: pre-line;
+    overflow-y: scroll;
+}
+
+.tabPanel .drinkPanel.active {
+    display:block;
+}
+
+.loadDrink li {
+    background-color: #444;
+    color: #EEE;
+    border-radius: unset;
+    margin: 3px;
+}
+
+.loadDrink li:hover {
+    background-color: #555;
+}
 
 /**
  * ID focused css
@@ -231,7 +325,10 @@ button:focus{
     background: url("img/stockholm.jpg") #DDD center no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #userPic {

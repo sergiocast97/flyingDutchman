@@ -1,6 +1,8 @@
-//Function to switch panel
 $(function() {
 
+    /**
+     * Switch Panel function
+     */
     $('.tabPanel .tabs li').on('click', function() {
 
         var $panel = $(this).closest('.tabPanel');
@@ -12,7 +14,7 @@ $(function() {
         var panelToShow = $(this).attr('rel');
 
 
-        $panel.find('.panel.active').slideUp(400, showNextPanel);
+        $panel.find('.drinkPanel.active').slideUp(400, showNextPanel);
 
 
         function showNextPanel() {
@@ -25,18 +27,17 @@ $(function() {
     });
 
 
-});
-
-
-//Scroll to div function
-$(function () {
-    $('a[href*="#"]').on('click', function (e) {
+    /**
+     * Scroll to div function
+     */
+    $('.tabCategory').on('click', function (e) {
         e.preventDefault();
 
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 185 //here adjusting the height since tab menu is 'fixed' on top
-        }, 500, 'linear');
+        }, 500, 'swing');
     });
+
 
 });
 
