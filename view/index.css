@@ -132,7 +132,7 @@ button:focus{
 }
 
 .user {
-    background: url("img/light.jpg") #DDD no-repeat center center;
+    background: url("img/stockholm.jpg") #DDD no-repeat center center;
     border-radius: 5px 5px 0 0;
     background-size: cover;
     height: 70%;
@@ -183,16 +183,17 @@ button:focus{
 }
 
 .userInfo{
+    height: 75%;
     width: 80%;
     display: flex;
     justify-content: space-around;
-    align-items:flex-end; 
+    align-items: center; 
 }
 
 .userDetails {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     height: 100%;
 }
 
@@ -203,6 +204,7 @@ button:focus{
 }
 
 .userDetails #balance{
+    margin-top: 10px;
     font-size: 30px;
     color: #FFF;
 }
@@ -215,12 +217,23 @@ button:focus{
 
 .accessItem {
     width: 100%;
+    padding: 20px;
     text-align: center;
+    vertical-align: middle;
+
+    text-decoration: none;
+    color: #222;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: 0.25s;
 }
 
-.accessItem a{
-    text-decoration: none;
-    color: black;
+.accessItem:hover{
+    color: #555;
+    background-color: #DDD;
 }
 
 /* Menu page */
@@ -322,7 +335,7 @@ button:focus{
  */
 
 #background {
-    background: url("img/stockholm.jpg") #DDD center no-repeat;
+    background: url("img/light.jpg") #DDD center no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -338,6 +351,11 @@ button:focus{
     border: 5px solid #FFF;
 }
 
+#space{
+    padding: 350px 0;
+}
+
+/*
 #userBackground{
     z-index: -1;
     position: absolute;
@@ -348,7 +366,7 @@ button:focus{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-}
+}*/
 
 /**
  * CSS Animations
