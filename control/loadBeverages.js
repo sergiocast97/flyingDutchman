@@ -11,7 +11,7 @@ function loadCider(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Cider")) {
-            cider.push(all[i][0]);
+            cider.push(all[i][0] + ", " + all[i][1]);
         }
     }
     cider.sort();
@@ -28,7 +28,8 @@ function loadStout(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Porter och Stout")) {
-            stout.push(all[i][0]);
+            stout.push(all[i]);
+
         }
     }
 

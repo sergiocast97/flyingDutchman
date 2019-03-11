@@ -11,7 +11,7 @@
     <script src="Dutchman%20Files/DBLoaded.js"></script>
     <script src="Dutchman%20Files/loader.js"></script>
     <script src="control/loadBeverages.js"></script>
-    <script src="control/tray.js"></script>
+    <script type="text/javascript" src="control/tray.js"></script>
 </head>
 
 
@@ -43,16 +43,17 @@
                 <script>
                     var stout = loadStout();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadStout').appendChild(ul);
-                    var listItem = 0;
 
                     stout.forEach(function(stout){
                         var li = document.createElement('li');
-                        li.id = listItem++;
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(stout));
+                        li.id = stout[3];
                         ul.appendChild(li);
-                        li.innerHTML += stout;
+                        li.innerHTML = stout[0] + ", " + stout[1];
                     });
-                    document.getElementById("loadStout").onclick = addToTray();
                 </script>
             </div>
         </div>
