@@ -329,6 +329,11 @@ button:focus{
     margin: 5px;
     margin-left:0;
 }
+
+.amount {
+    float:right;
+    font-size: 24px;
+}
 .drinkPanel {
     height: 200px;
     display:none;
