@@ -240,14 +240,13 @@ button:focus{
 
 .tabMenu {
 
-    position: fixed;
     top: 0;
+    position: fixed;
     width: 100%;
 
     background-color: #FFF;
     list-style-type: none;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    
     display: flex;
     
 }
@@ -302,6 +301,34 @@ button:focus{
     padding: 0;
 }
 
+.trayContainer {
+    display: block;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #555555;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tray {
+    display: block;
+    color: white;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.trayItem {
+    list-style-type: none;
+    background-color: #BBBBBB;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #222222;
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left:0;
+}
 .drinkPanel {
     height: 200px;
     display:none;
@@ -368,7 +395,7 @@ button:focus{
 }
 
 #space{
-    padding: 400px 0;
+    padding: 300px;
 }
 
 /*
