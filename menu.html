@@ -44,6 +44,7 @@
         <a class="tabCategory" id="tabCiders" href="#cidersPanel">Ciders</a>
         <a class="tabCategory" id="tabSpirits" href="#spiritsPanel">Spirits</a>
         <a class="tabCategory" id="tabWines" href="#winesPanel">Wines</a>
+        <a id="amount" class="tabCategory">0</a>
     </div>
 
     <div id="space"></div>
@@ -51,7 +52,6 @@
     <div class="trayContainer">
         <h2>Your Tray</h2>
         <ul class="tray" id="tray"></ul>
-        <p id="total"></p>
     </div>
     <!-- Beer Panel-->
     <div class="tabPanel" id="beersPanel">
@@ -75,7 +75,7 @@
                     stout.forEach(function(stout){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(stout));
+                        li.addEventListener('click', () => {addToTray(stout);addAmount(stout)});
                         li.id = stout[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + stout[0] + "</span>" + " " + stout[1] + " " + "<span class=price>" + stout[4] + "kr" + "</span>";
@@ -95,7 +95,7 @@
                     ale.forEach(function(ale){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(ale));
+                        li.addEventListener('click', () => {addToTray(ale);addAmount(ale)});
                         li.id = ale[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + ale[0] + "</span>" + " " + ale[1] + " " + "<span class=price>" + ale[4] + "kr" + "</span>";
@@ -115,7 +115,7 @@
                     lager.forEach(function(lager){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(lager));
+                        li.addEventListener('click', () =>{addToTray(lager);addAmount(lager)});
                         li.id = lager[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + lager[0] + "</span>" + " " + lager[1] + " " + "<span class=price>" + lager[4] + "kr" + "</span>";
@@ -139,7 +139,7 @@
                     cider.forEach(function(cider){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(cider));
+                        li.addEventListener('click', () => {addToTray(cider);addAmount(cider)});
                         li.id = cider[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + cider[0] + "</span>" + " " + cider[1] + " " + "<span class=price>" + cider[4] + "kr" + "</span>";
@@ -169,7 +169,7 @@
                     whiskey.forEach(function(whiskey){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(whiskey));
+                        li.addEventListener('click', () => {addToTray(whiskey);addAmount(whiskey)});
                         li.id = whiskey[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" + " " + whiskey[1] + " " + "<span class=price>" + whiskey[4] + "kr" + "</span>";
@@ -212,7 +212,7 @@
                     redWine.forEach(function(redWine){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(redWine));
+                        li.addEventListener('click', () => {addToTray(redWine);addAmount(redWine)});
                         li.id = redWine[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" + " " + redWine[1] + " " + "<span class=price>" + redWine[4] + "kr" + "</span>";
@@ -231,7 +231,7 @@
                     whiteWine.forEach(function(whiteWine){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(whiteWine));
+                        li.addEventListener('click', () => {addToTray(whiteWine);addAmount(whiteWine)});
                         li.id = whiteWine[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" + " " + whiteWine[1] + " " + "<span class=price>" + whiteWine[4] + "kr" + "</span>";
@@ -250,7 +250,7 @@
                     roseWine.forEach(function(roseWine){
                         var li = document.createElement('li');
                         li.className = "listItem";
-                        li.addEventListener('click', () => addToTray(roseWine));
+                        li.addEventListener('click', () => {addToTray(roseWine);addAmount(roseWine)});
                         li.id = roseWine[3];
                         ul.appendChild(li);
                         li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" + " " + roseWine[1] + " " + "<span class=price>" + roseWine[4] + "kr" + "</span>";
