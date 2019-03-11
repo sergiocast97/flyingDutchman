@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu Page</title>
+<<<<<<< HEAD:menuPage.html
     <link rel="stylesheet" href="view/menuStyle.css">
 <<<<<<< HEAD
 
@@ -11,10 +12,16 @@
     <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
 >>>>>>> 067b9c628b49cbafd8012c6d7a8e956784431769
     <script src="control/menuFunctions.js"></script>
+=======
+    <link rel="stylesheet" href="view/index.css">
+    <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
+    <script src="control/menu.js"></script>
+>>>>>>> 18fe16c53781ba76d3ea351099b08b1af1195fd7:menu.html
 
     <script src="Dutchman%20Files/Beverages.js"></script>
     <script src="Dutchman%20Files/DBLoaded.js"></script>
     <script src="Dutchman%20Files/loader.js"></script>
+<<<<<<< HEAD:menuPage.html
 <<<<<<< HEAD
     <script src="menuFunctions.js"></script>
 =======
@@ -32,18 +39,38 @@
     </ul>
     </div>
   </section>
+=======
+    <script src="control/loadBeverages.js"></script>
+</head>
 
+
+<body id="background">
+
+    <!-- Access tab -->
+    <div class="tabMenu">
+        <a class="tabCategory" id="tabBeers" href="#beersPanel">Beers</a>
+        <a class="tabCategory" id="tabCiders" href="#cidersPanel">Ciders</a>
+        <a class="tabCategory" id="tabSpirits" href="#spiritsPanel">Spirits</a>
+        <a class="tabCategory" id="tabWines" href="#winesPanel">Wines</a>
+    </div>
+
+    <div id="space"></div>
+>>>>>>> 18fe16c53781ba76d3ea351099b08b1af1195fd7:menu.html
+
+    <!-- Beer Panel-->
     <div class="tabPanel" id="beersPanel">
+
         <h2>Beers</h2>
+
         <ul class="tabs">
             <li rel="stout" class="active">Stout</li>
             <li rel="ale">Ale</li>
             <li rel="lager">Lager</li>
         </ul>
 
-        <div id="stout" class="panel active">
-            <div id="loadStout">
-                <script type="text/javascript">
+        <div id="stout" class="drinkPanel active">
+            <div class="loadDrink" id="loadStout">
+                <script>
                     var stout = loadStout();
                     var ul = document.createElement('ul');
                     document.getElementById('loadStout').appendChild(ul);
@@ -56,9 +83,10 @@
                 </script>
             </div>
         </div>
-        <div id="ale" class="panel">
-            <div id="loadAle">
-                <script type="text/javascript">
+
+        <div id="ale" class="drinkPanel">
+            <div class="loadDrink" id="loadAle">
+                <script>
                     var ale = loadAle();
                     var ul = document.createElement('ul');
                     document.getElementById('loadAle').appendChild(ul);
@@ -71,9 +99,10 @@
                 </script>
             </div>
         </div>
-        <div id="lager" class="panel">
-            <div id="loadLager">
-                <script type="text/javascript">
+
+        <div id="lager" class="drinkPanel">
+            <div class="loadDrink" id="loadLager">
+                <script>
                     var lager = loadLager();
                     var ul = document.createElement('ul');
                     document.getElementById('loadLager').appendChild(ul);
@@ -86,14 +115,14 @@
                 </script>
             </div>
         </div>
-    </div>
 
+    </div>
 
     <div class="tabPanel" id="cidersPanel">
         <h2>Ciders</h2>
-        <div id="ciders" class="panel active">
-            <div id="loadCider">
-                <script type="text/javascript">
+        <div id="ciders" class="drinkPanel` active">
+            <div class="loadDrink" id="loadCider">
+                <script>
                     var cider = loadCider();
                     var ul = document.createElement('ul');
                     document.getElementById('loadCider').appendChild(ul);
@@ -109,7 +138,6 @@
 
     </div>
 
-
     <div class="tabPanel" id="spiritsPanel">
         <h2>Spirits</h2>
         <ul class="tabs">
@@ -118,9 +146,9 @@
             <li rel="light">Light</li>
         </ul>
 
-        <div id="whiskey" class="panel active">
-            <div id="loadWhiskey">
-                <script type="text/javascript">
+        <div id="whiskey" class="drinkPanel active">
+            <div class="loadDrink" id="loadWhiskey">
+                <script>
                     var whiskey = loadWhiskey();
                     var ul = document.createElement('ul');
                     document.getElementById('loadWhiskey').appendChild(ul);
@@ -133,14 +161,14 @@
                 </script>
             </div>
         </div>
-        <div id="medium" class="panel">
+        <div id="medium" class="drinkPanel">
             content2<br/>
             content2<br/>
             content2<br/>
             content2<br/>
             content2<br/>
         </div>
-        <div id="light" class="panel">
+        <div id="light" class="drinkPanel">
             content3<br/>
             content3<br/>
             content3<br/>
@@ -157,9 +185,9 @@
             <li rel="rose">Rosè</li>
         </ul>
 
-        <div id="red" class="panel active">
-            <div id="loadRedWine">
-                <script type="text/javascript">
+        <div id="red" class="drinkPanel active">
+            <div class="loadDrink" id="loadRedWine">
+                <script>
                     var redWine = loadRedWine();
                     var ul = document.createElement('ul');
                     document.getElementById('loadRedWine').appendChild(ul);
@@ -172,9 +200,9 @@
                 </script>
             </div>
         </div>
-        <div id="white" class="panel">
-            <div id="loadWhiteWine">
-                <script type="text/javascript">
+        <div id="white" class="drinkPanel">
+            <div class="loadDrink" id="loadWhiteWine">
+                <script>
                     var whiteWine = loadWhiteWine();
                     var ul = document.createElement('ul');
                     document.getElementById('loadWhiteWine').appendChild(ul);
@@ -187,9 +215,9 @@
                 </script>
             </div>
         </div>
-        <div id="rose" class="panel">
-            <div id="loadRoseWine">
-                <script type="text/javascript">
+        <div id="rose" class="drinkPanel">
+            <div class="loadDrink" id="loadRoseWine">
+                <script>
                     var roseWine = loadRoseWine();
                     var ul = document.createElement('ul');
                     document.getElementById('loadRoseWine').appendChild(ul);
