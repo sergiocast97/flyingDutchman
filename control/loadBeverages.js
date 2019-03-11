@@ -11,16 +11,17 @@ function loadCider(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Cider")) {
-            cider.push(all[i][0]);
+            cider.push(all[i]);
         }
     }
+    cider = cider.slice(1, 12);
     cider.sort();
     return cider;
 }
 
 // Beers
 
-function loadStout() {
+function loadStout(){
 
     var all = allBeverages();
     var stout = [];
@@ -28,15 +29,17 @@ function loadStout() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Porter och Stout")) {
-            stout.push(all[i][0]);
+            stout.push(all[i]);
+
         }
     }
+    stout = stout.slice(20, 37);
     stout.sort();
 
     return stout;
 }
 
-function loadAle() {
+function loadAle(){
 
     var all = allBeverages();
     var ale = [];
@@ -44,15 +47,16 @@ function loadAle() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Ale")) {
-            ale.push(all[i][0]);
+            ale.push(all[i]);
         }
     }
+    ale  = ale.slice(20, 37);
     ale.sort();
 
     return ale;
 }
 
-function loadLager() {
+function loadLager(){
 
     var all = allBeverages();
     var lager = [];
@@ -60,9 +64,10 @@ function loadLager() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Ljus lager")) {
-            lager.push(all[i][0]);
+            lager.push(all[i]);
         }
     }
+    lager  = lager.slice(20, 37);
     lager.sort();
 
     return lager;
@@ -79,10 +84,11 @@ function loadRedWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("R\u00c3\u00b6tt vin")) {
-            redWine.push(all[i][0]);
+            redWine.push(all[i]);
         }
     }
 
+    redWine  = redWine.slice(20, 30);
     redWine.sort();
 
     return redWine;
@@ -96,11 +102,12 @@ function loadWhiteWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Vitt vin")) {
-            whiteWine.push(all[i][0]);
+            whiteWine.push(all[i]);
         }
     }
 
 
+    whiteWine  = whiteWine.slice(0, 10);
     whiteWine.sort();
 
     return whiteWine;
@@ -114,10 +121,11 @@ function loadRoseWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Ros\u00c3\u00a9vin")) {
-            roseWine.push(all[i][0]);
+            roseWine.push(all[i]);
         }
     }
 
+    roseWine  = roseWine.slice(20, 30);
     roseWine.sort();
 
     return roseWine;
@@ -133,10 +141,11 @@ function loadWhiskey() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Whisky, Malt")) {
-            whiskey.push(all[i][0]);
+            whiskey.push(all[i]);
         }
     }
 
+    whiskey  = whiskey.slice(10, 17);
     whiskey.sort();
 
     return whiskey;

@@ -104,7 +104,7 @@ function allBeverages() {
     // items, you may introduce filter functions in the loop... see the template within comments.
     //
     for (i = 0; i < DB2.spirits.length; i++) {
-        collector.push([DB2.spirits[i].namn, DB2.spirits[i].varugrupp]);
+        collector.push([DB2.spirits[i].namn, DB2.spirits[i].namn2, DB2.spirits[i].varugrupp, DB2.spirits[i].artikelid, DB2.spirits[i].prisinklmoms]);
     };
     //
     return collector;
