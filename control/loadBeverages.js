@@ -11,9 +11,10 @@ function loadCider(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Cider")) {
-            cider.push(all[i][0] + ", " + all[i][1]);
+            cider.push(all[i]);
         }
     }
+    cider = cider.slice(1, 12);
     cider.sort();
     return cider;
 }
@@ -32,7 +33,6 @@ function loadStout(){
 
         }
     }
-
     stout = stout.slice(20, 37);
     stout.sort();
 
@@ -47,7 +47,7 @@ function loadAle(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Ale")) {
-            ale.push(all[i][0]);
+            ale.push(all[i]);
         }
     }
     ale  = ale.slice(20, 37);
@@ -64,7 +64,7 @@ function loadLager(){
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("\u00c3\u2013l, Ljus lager")) {
-            lager.push(all[i][0]);
+            lager.push(all[i]);
         }
     }
     lager  = lager.slice(20, 37);
@@ -84,11 +84,11 @@ function loadRedWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("R\u00c3\u00b6tt vin")) {
-            redWine.push(all[i][0]);
+            redWine.push(all[i]);
         }
     }
 
-    redWine  = redWine.slice(20, 37);
+    redWine  = redWine.slice(20, 30);
     redWine.sort();
 
     return redWine;
@@ -102,7 +102,7 @@ function loadWhiteWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Vitt vin")) {
-            whiteWine.push(all[i][0]);
+            whiteWine.push(all[i]);
         }
     }
 
@@ -121,11 +121,11 @@ function loadRoseWine() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Ros\u00c3\u00a9vin")) {
-            roseWine.push(all[i][0]);
+            roseWine.push(all[i]);
         }
     }
 
-    roseWine  = roseWine.slice(20, 37);
+    roseWine  = roseWine.slice(20, 30);
     roseWine.sort();
 
     return roseWine;
@@ -141,11 +141,11 @@ function loadWhiskey() {
 
     for (i = 0; i < all.length; i++) {
         if (all[i].includes("Whisky, Malt")) {
-            whiskey.push(all[i][0]);
+            whiskey.push(all[i]);
         }
     }
 
-    whiskey  = whiskey.slice(20, 37);
+    whiskey  = whiskey.slice(10, 17);
     whiskey.sort();
 
     return whiskey;

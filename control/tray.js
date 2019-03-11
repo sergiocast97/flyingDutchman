@@ -1,13 +1,15 @@
-function addToTray(){
+function addToTray(beverage){
 
-    var ul = document.getElementById("stout");
-    var product = document.getElementById("listItem");
+    //here we should get the tray-element instead, have to create it in the menu.HTML
+    var ul = document.getElementById("beverageList");
+
     var li = document.createElement("li");
-
-    li.setAttribute('id', product);
-    li.appendChild(document.createTextNode(product));
+    li.innerHTML = beverage;
+    ul.value = "";
     ul.appendChild(li);
-    console.log(ul);
     console.log(li);
+
+    console.log(beverage);
+    console.log(ul);
 
 };

@@ -320,7 +320,8 @@ button:focus{
     padding: 5px 10px;
     margin: 5px 10px;
     margin-left: 0;
-    width: 22%;
+    width: 45%;
+    height: 30px;
     border-radius: 5px;
 
     background-color: #EEE;
@@ -332,6 +333,16 @@ button:focus{
 .loadDrink li:hover {
     background-color: #DDD;
     color: #333;
+}
+
+.price {
+    float: right;
+    color: #777777;
+    font-size: 90%;
+}
+
+.brand {
+    font-weight: bolder;
 }
 
 /**

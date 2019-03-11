@@ -52,7 +52,7 @@
                         li.addEventListener('click', () => addToTray(stout));
                         li.id = stout[3];
                         ul.appendChild(li);
-                        li.innerHTML = stout[0] + ", " + stout[1];
+                        li.innerHTML = "<span class=brand>" + stout[0] + "</span>" + " " + stout[1] + " " + "<span class=price>" + stout[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -63,12 +63,16 @@
                 <script>
                     var ale = loadAle();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadAle').appendChild(ul);
 
                     ale.forEach(function(ale){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(ale));
+                        li.id = ale[3];
                         ul.appendChild(li);
-                        li.innerHTML += ale;
+                        li.innerHTML = "<span class=brand>" + ale[0] + "</span>" + " " + ale[1] + " " + "<span class=price>" + ale[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -79,12 +83,16 @@
                 <script>
                     var lager = loadLager();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadLager').appendChild(ul);
 
                     lager.forEach(function(lager){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(lager));
+                        li.id = lager[3];
                         ul.appendChild(li);
-                        li.innerHTML += lager;
+                        li.innerHTML = "<span class=brand>" + lager[0] + "</span>" + " " + lager[1] + " " + "<span class=price>" + lager[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -99,12 +107,16 @@
                 <script>
                     var cider = loadCider();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadCider').appendChild(ul);
 
                     cider.forEach(function(cider){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(cider));
+                        li.id = cider[3];
                         ul.appendChild(li);
-                        li.innerHTML += cider;
+                        li.innerHTML = "<span class=brand>" + cider[0] + "</span>" + " " + cider[1] + " " + "<span class=price>" + cider[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -125,12 +137,16 @@
                 <script>
                     var whiskey = loadWhiskey();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadWhiskey').appendChild(ul);
 
                     whiskey.forEach(function(whiskey){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(whiskey));
+                        li.id = whiskey[3];
                         ul.appendChild(li);
-                        li.innerHTML += whiskey;
+                        li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" + " " + whiskey[1] + " " + "<span class=price>" + whiskey[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -164,12 +180,16 @@
                 <script>
                     var redWine = loadRedWine();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadRedWine').appendChild(ul);
 
                     redWine.forEach(function(redWine){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(redWine));
+                        li.id = redWine[3];
                         ul.appendChild(li);
-                        li.innerHTML += redWine;
+                        li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" + " " + redWine[1] + " " + "<span class=price>" + redWine[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -179,12 +199,16 @@
                 <script>
                     var whiteWine = loadWhiteWine();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadWhiteWine').appendChild(ul);
 
                     whiteWine.forEach(function(whiteWine){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(whiteWine));
+                        li.id = whiteWine[3];
                         ul.appendChild(li);
-                        li.innerHTML += whiteWine;
+                        li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" + " " + whiteWine[1] + " " + "<span class=price>" + whiteWine[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
@@ -194,12 +218,16 @@
                 <script>
                     var roseWine = loadRoseWine();
                     var ul = document.createElement('ul');
+                    ul.id = "beverageList";
                     document.getElementById('loadRoseWine').appendChild(ul);
 
                     roseWine.forEach(function(roseWine){
                         var li = document.createElement('li');
+                        li.className = "listItem";
+                        li.addEventListener('click', () => addToTray(roseWine));
+                        li.id = roseWine[3];
                         ul.appendChild(li);
-                        li.innerHTML += roseWine;
+                        li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" + " " + roseWine[1] + " " + "<span class=price>" + roseWine[4] + "kr" + "</span>";
                     });
                 </script>
             </div>
