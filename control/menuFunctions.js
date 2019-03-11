@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-$(document).ready(function() {
-$("#tabBeers").click(function(e) {
-    $('html, body').animate({
-        scrollTop: $("#Beers_container").offset().top
-    }, 1000);
-});
-
-$("#tabCiders").click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#Ciders_container").offset().top
-    }, 1000);
-});
-
-$("#tabSpirits").click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#Spirits").offset().top
-    }, 1000);
-});
-
-$("#tabWines").click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#Wines").offset().top
-    }, 2000);
-});
-})
-
-$("#tabBeers").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Beers").offset().top},
-    500, 'linear');
-});
-
-$("#tabCiders").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Ciders").offset().top},
-        500, 'linear');
-});
-
-$("#tabSpirits").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Spirits").offset().top},
-        500, 'linear');
-});
-
-$("#tabWines").click(function() {
-    $('html,body').animate({
-            scrollTop: $("#Wines").offset().top},
-        500, 'linear');
-});
-
-=======
 //Function to switch panel
->>>>>>> 067b9c628b49cbafd8012c6d7a8e956784431769
 $(function() {
 
 
@@ -69,11 +13,7 @@ $(function() {
         var panelToShow = $(this).attr('rel');
 
 
-<<<<<<< HEAD
-        $panel.find('.panel.active').slideUp(300, swing, showNextPanel);
-=======
         $panel.find('.panel.active').slideUp(400, showNextPanel);
->>>>>>> 067b9c628b49cbafd8012c6d7a8e956784431769
 
 
         function showNextPanel() {
