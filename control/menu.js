@@ -1,12 +1,8 @@
 $(function() {
 
-<<<<<<< HEAD:control/menuFunctions.js
-
-=======
     /**
      * Switch Panel function
      */
->>>>>>> 18fe16c53781ba76d3ea351099b08b1af1195fd7:control/menu.js
     $('.tabPanel .tabs li').on('click', function() {
 
         var $panel = $(this).closest('.tabPanel');
