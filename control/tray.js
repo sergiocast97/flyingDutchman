@@ -4,20 +4,17 @@ function addToTray(beverage){
     var ul = document.getElementById("tray");
 
     var li = document.createElement("li");
+    li.id = beverage[3];
     li.innerHTML = "<span class=brand>" + beverage[0] + "</span>" + " " + beverage[1] + " " + "<span class=price>" + beverage[4] + "kr" + "</span>";
     li.className = "trayItem";
+    li.addEventListener('click', () => removeFromTray(li));
     //ul.value = "";
     ul.appendChild(li);
-    console.log(li);
-
-    console.log(beverage);
-    console.log(ul);
 
 };
 
 function removeFromTray(beverage){
     var ul = document.getElementById("tray");
-    var item = document.getElementById(beverage.value);
-    ul.removeChild(item);
+    ul.removeChild(beverage)
 }
 
