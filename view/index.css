@@ -272,6 +272,7 @@ button:focus{
 .tabPanel {
     padding: 25px;
     margin: 20px;
+    width: 60%; 
 
     background-color: #FFF;
     border-radius: 5px;
@@ -304,10 +305,16 @@ button:focus{
 .trayContainer {
     display: block;
     margin: 20px;
+    width: 35%;
     padding: 25px;
     border-radius: 5px;
     background-color: #555555;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    
+    max-width: 25%;
+    position: fixed;
+    right: 0;
+    top: 8%;
 }
 
 .tray {
@@ -323,17 +330,20 @@ button:focus{
     padding: 5px 10px;
     display: inline-block;
     color: #222222;
-    width: 45%;
-    height: 30px;
+    width: 70%;
+    height: 50%;
     border-radius: 5px;
     margin: 5px;
     margin-left:0;
 }
 
-.amount {
+#amount {
     float:right;
+    margin-top: 45%;
     font-size: 24px;
 }
+
+
 .drinkPanel {
     height: 200px;
     display:none;
