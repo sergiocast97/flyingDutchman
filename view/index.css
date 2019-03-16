@@ -303,52 +303,52 @@ button:focus{
 }
 
 .trayContainer {
-    display: block;
-    margin: 20px;
-    width: 35%;
-    padding: 25px;
-    border-radius: 5px;
-    background-color: #555555;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     
-    max-width: 25%;
+    margin: 20px;
+    width: 30%;
+    max-height: 80%;
     position: fixed;
     right: 0;
     top: 8%;
+
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .tray {
-    display: block;
     color: white;
-    height: 100px;
     overflow-y: scroll;
+    margin: 10px 0;
 }
 
 .trayItem {
+    cursor: pointer;
     list-style-type: none;
-    background-color: #BBBBBB;
+    background-color: #EEE;
     padding: 5px 10px;
     display: inline-block;
-    color: #222222;
-    width: 70%;
-    height: 50%;
+    color: #222;
+    width: 90%;
     border-radius: 5px;
     margin: 5px;
     margin-left:0;
+    transition: 0.25s;
 }
 
-#amount {
-    float:right;
-    margin-top: 45%;
-    font-size: 24px;
+.trayItem:hover {
+    background: #DDD;
 }
-
 
 .drinkPanel {
-    height: 200px;
+    height: 100%;
     display:none;
     color: #222;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 .drinkPanel.active {
@@ -365,6 +365,7 @@ button:focus{
     width: 45%;
     height: 30px;
     border-radius: 5px;
+    cursor: pointer;
 
     background-color: #EEE;
     color: #222;
@@ -409,9 +410,16 @@ button:focus{
     border: 5px solid #FFF;
 }
 
-#space{
-    padding: 300px;
+#beersPanel {
+    margin-top: 1200px;
 }
+
+#amount {
+    align-self: flex-end;
+    font-size: 24px;
+    padding-right: 25px;
+}
+
 
 /*
 #userBackground{
