@@ -2,39 +2,66 @@
 <html lang="en">
 <head>
 
-    <title>The Flying Dutchman - Register</title>
+    <title class="lang" key="register"></title>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Styling -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="view/index.css">
+
+    <!-- JQuery -->
+    <script src="model/jquery-3.3.1.min.js"></script>
+
+    <!-- Database Loader -->
+    <script src="model/loader.js"></script>
+
+    <!-- Language-->
+    <script src="model/lang_string.js"></script>
+    <script src="control/language.js"></script>
+
+    <!-- Beverages -->
+    <script src="model/Beverages.js"></script>
+
+    <!-- Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Login -->
     <script src="control/login.js" id="login"></script>
 
 </head>
 
 <body id="background">
 
+    <div class="floatLanguage">
+        <div class="languageSelection">
+            <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
+            <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
+        </div>
+    </div>
+
     <div class="panel">
 
         <div class="panelElement">
-            <h1>Register</h1>
+            <h1 class="lang" key="register"></h1>
         </div>
         
         <div class="panelElement">
-            <input name="username" type="text" placeholder="username">
+            <input name="username" type="text" id="username" class="lang" key="username" placeholder="username">
         </div>
 
         <div class="panelElement">
-            <input name="email" type="text" placeholder="email">
+            <input name="email" type="text" class="lang" key="email" placeholder="email">
         </div>
 
         <div class="panelElement">
-            <input name="password" type="password" placeholder="password">
+            <input name="password" type="password" id="password" class="lang" key="password" placeholder="password">
         </div>
 
         <div class="panelElement">
-            <button type="submit"  id="submit" onclick="register()">Register</button>
+            <button type="submit"  id="submit" onclick="register()" class="lang" key="register"></button>
         </div>
 
     </div>

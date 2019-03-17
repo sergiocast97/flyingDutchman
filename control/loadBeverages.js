@@ -1,8 +1,9 @@
 
 // TODO; More load functions for different beverages and filter duplicate entries.
 
-// Ciders
-
+/**
+ * Load Ciders
+ */
 function loadCider(){
 
     var all = allBeverages();
@@ -19,8 +20,9 @@ function loadCider(){
     return cider;
 }
 
-// Beers
-
+/**
+ * Load Stouts
+ */
 function loadStout(){
 
     var all = allBeverages();
@@ -39,6 +41,9 @@ function loadStout(){
     return stout;
 }
 
+/**
+ * Load Ale
+ */
 function loadAle(){
 
     var all = allBeverages();
@@ -56,6 +61,9 @@ function loadAle(){
     return ale;
 }
 
+/**
+ * Load Lager
+ */
 function loadLager(){
 
     var all = allBeverages();
@@ -73,9 +81,9 @@ function loadLager(){
     return lager;
 }
 
-//Wines
-
-
+/**
+ * Load Red Wine
+ */
 function loadRedWine() {
 
     var all = allBeverages();
@@ -94,6 +102,9 @@ function loadRedWine() {
     return redWine;
 }
 
+/**
+ * Load White Wine
+ */
 function loadWhiteWine() {
 
     var all = allBeverages();
@@ -113,6 +124,9 @@ function loadWhiteWine() {
     return whiteWine;
 }
 
+/**
+ * Load Rose Wine
+ */
 function loadRoseWine() {
 
     var all = allBeverages();
@@ -131,8 +145,9 @@ function loadRoseWine() {
     return roseWine;
 }
 
-// Spirits
-
+/**
+ * Load Spirits
+ */
 function loadWhiskey() {
 
     var all = allBeverages();

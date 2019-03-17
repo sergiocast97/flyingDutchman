@@ -111,6 +111,12 @@ button:focus{
     justify-content: space-between;
 }
 
+.floatLanguage {
+    position: fixed;
+    right: 1%;
+    top: 1%;
+}
+
 /* User Homepage */
 .homepage{
     align-self: center;
@@ -220,6 +226,7 @@ button:focus{
     padding: 20px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 5px;
 
     text-decoration: none;
     color: #222;
@@ -234,6 +241,7 @@ button:focus{
 .accessItem:hover{
     color: #555;
     background-color: #DDD;
+    border-radius: 5px;
 }
 
 /* Menu page */

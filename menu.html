@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Menu Page</title>
 
-    <link rel="stylesheet" href="view/menuStyle.css">
-    <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
-    <script src="control/menuFunctions.js"></script>
+    <title class="lang" key="menu"></title>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="view/index.css">
-    <script type="text/javascript" src="Dutchman%20Files/jquery-3.3.1.min.js"></script>
-    <script src="control/menu.js"></script>
 
+    <!-- JQuery -->
+    <script src="model/jquery-3.3.1.min.js"></script>
+    
+    <!-- Database Loader -->
+    <script src="model/loader.js"></script>
 
-    <script src="Dutchman%20Files/Beverages.js"></script>
-    <script src="Dutchman%20Files/DBLoaded.js"></script>
-    <script src="Dutchman%20Files/loader.js"></script>
+    <!-- Language-->
+    <script src="model/lang_string.js"></script>
+    <script src="control/language.js"></script>
+
+    <!-- Beverages -->
+    <script src="model/Beverages.js"></script>
     <script src="control/loadBeverages.js"></script>
-    <script type="text/javascript" src="control/tray.js"></script>
 
+    <!-- Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Login -->
+    <script src="control/login.js" id="login"></script>
+
+    <!-- Menu -->
+    <script src="control/menu.js"></script>
+    <script src="control/tray.js"></script>
   
-    </head>
+</head>
 
 <body id="background">
 
     <!-- Access tab -->
     <div class="tabMenu">
-        <a class="tabCategory" id="tabBeers" href="#beersPanel">Beers</a>
-        <a class="tabCategory" id="tabCiders" href="#cidersPanel">Ciders</a>
-        <a class="tabCategory" id="tabSpirits" href="#spiritsPanel">Spirits</a>
-        <a class="tabCategory" id="tabWines" href="#winesPanel">Wines</a>
- 
+        <a class="tabCategory lang" id="tabBeers" href="#beersPanel" key="beer"></a>
+        <a class="tabCategory lang" id="tabCiders" href="#cidersPanel" key="cider"></a>
+        <a class="tabCategory lang" id="tabSpirits" href="#spiritsPanel" key="spirit"></a>
+        <a class="tabCategory lang" id="tabWines" href="#winesPanel" key="wine"></a>
     </div>
-
-    <div id="space"></div>
 
     <div class="trayContainer">
         <h2>Your Tray</h2>
