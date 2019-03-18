@@ -14,7 +14,7 @@ function addToTray(beverage){
     var li = document.createElement("li");
 
     li.id = beverage[3];
-    li.innerHTML = "<span class=brand>" + beverage[0] + "</span>" + " " + beverage[1] + " " + "<span class=price id='price'>" + beverage[4] + "kr" + "</span>";
+    li.innerHTML = "<span class=brand>" + beverage[0] + "</span>" + " " + beverage[1] + " " + "<span class=price id='price'>" + beverage[4] + "</span>";
     li.className = "trayItem";
     li.addEventListener('click', () => {removeFromTray(li);subAmount(beverage[4])});
     //ul.value = "";
@@ -35,6 +35,9 @@ function removeFromTray(beverage){
  * Add up price of beverage
  * @param beverage Beverage name
  */
+
+// TODO: Merge addAmount together
+
 function addAmount(beverage){
 
     var previousAmount = document.getElementById("amount").innerHTML;
@@ -63,6 +66,9 @@ function addAmount2(price){
  * Substract price from removed beverage
  * @param beverage beverage
  */
+
+// TODO: Merge subAmount together
+
 function subAmount(beverage){
 
     var previousAmount = document.getElementById("amount").innerHTML;
@@ -75,6 +81,7 @@ function subAmount(beverage){
     console.log(totalAmount);
 
 }
+
 
 function subAmount2(price){
 
@@ -117,13 +124,5 @@ function drop(event){
     tray = document.getElementById("tray");
     tray.appendChild(newTrayItem);
 
-
-    /*
-    //$selectedElement.innerHTML = "<span class=brand>" + beverage[0] + "</span>" + " " + beverage[1] + " " + "<span class=price>" + beverage[4] + "kr" + "</span>";
-    $selectedElement.className = "trayItem";
-    $selectedElement.addEventListener('click', () => {removeFromTray($selectedElement);subAmount2(price);});
-    console.log($selectedElement);
-    console.log($targetElement);
-    $targetElement.appendChild($selectedElement); */
 }
 
