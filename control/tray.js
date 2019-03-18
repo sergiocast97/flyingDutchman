@@ -1,12 +1,17 @@
 
 // TODO: Change to dragNdrop on every beverage type. Make dragNdrop available in tablet mode
 
+// Tray functionality
+
+/**
+ * Add beverage to tray
+ * @param beverage Beverage name
+ */
 function addToTray(beverage){
 
     //here we should get the tray-element instead, have to create it in the menu.HTML
     var ul = document.getElementById("tray");
     var li = document.createElement("li");
-    console.log(beverage);
 
     li.id = beverage[3];
     li.innerHTML = "<span class=brand>" + beverage[0] + "</span>" + " " + beverage[1] + " " + "<span class=price id='price'>" + beverage[4] + "kr" + "</span>";
@@ -17,13 +22,19 @@ function addToTray(beverage){
 
 };
 
+/**
+ * Remove beverage from tray
+ * @param beverage Beverage name
+ */
 function removeFromTray(beverage){
     var ul = document.getElementById("tray");
     ul.removeChild(beverage);
-    console.log("removed");
-    console.log(ul);
 }
 
+/**
+ * Add up price of beverage
+ * @param beverage Beverage name
+ */
 function addAmount(beverage){
 
     var previousAmount = document.getElementById("amount").innerHTML;
@@ -48,6 +59,10 @@ function addAmount2(price){
 
 }
 
+/**
+ * Substract price from removed beverage
+ * @param beverage beverage
+ */
 function subAmount(beverage){
 
     var previousAmount = document.getElementById("amount").innerHTML;
