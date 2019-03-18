@@ -308,6 +308,7 @@ button:focus{
     border-radius: 5px;
     background-color: #555555;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    touch-action: none;
 }
 
 .tray {
@@ -315,6 +316,7 @@ button:focus{
     color: white;
     height: 100px;
     overflow-y: scroll;
+    touch-action: none;
 }
 
 .trayItem {
@@ -328,6 +330,7 @@ button:focus{
     border-radius: 5px;
     margin: 5px;
     margin-left:0;
+    touch-action: none;
 }
 
 .amount {
@@ -339,10 +342,12 @@ button:focus{
     display:none;
     color: #222;
     overflow-y: scroll;
+    touch-action: none;
 }
 
 .drinkPanel.active {
     display:block;
+    touch-action: none;
 }
 
 .loadDrink ul li {
@@ -360,11 +365,13 @@ button:focus{
     color: #222;
     border-radius: 5px;
     transition: 0.25s;
+    touch-action: none;
 }
 
 .loadDrink li:hover {
     background-color: #DDD;
     color: #333;
+    touch-action: none;
 }
 
 .price {

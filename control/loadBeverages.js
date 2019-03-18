@@ -1,6 +1,24 @@
 
 // TODO; More load functions for different beverages and filter duplicate entries.
 
+
+function loadBeverage(input){
+    var all = allBeverages();
+    var beverage = [];
+
+    for(i = 0; i < all.length; i++) {
+        if (all[i].includes(input)){
+            beverage.push(all[i]);
+        }
+    }
+    beverage = beverage.slice(1, 12);
+    beverage.sort();
+    return beverage;
+}
+
+// OLD FUNCTIONS //
+
+/**
 // Ciders
 
 function loadCider(){
@@ -150,3 +168,4 @@ function loadWhiskey() {
 
     return whiskey;
 }
+**/
