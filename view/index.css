@@ -326,14 +326,12 @@ button:focus{
 
     display: flex;
     flex-direction: column;
-    touch-action: none;
 }
 
 .tray {
     color: white;
     overflow-y: scroll;
     margin: 10px 0;
-    touch-action: none;
 }
 
 .trayItem {
@@ -348,7 +346,6 @@ button:focus{
     margin: 5px;
     margin-left:0;
     transition: 0.25s;
-    touch-action: none;
 }
 
 .trayItem:hover {
@@ -360,12 +357,10 @@ button:focus{
     display:none;
     color: #222;
     /*overflow-y: scroll;*/
-    touch-action: none;
 }
 
 .drinkPanel.active {
     display:block;
-    touch-action: none;
 }
 
 .loadDrink ul li {
@@ -433,6 +428,10 @@ button:focus{
     align-self: flex-end;
     font-size: 24px;
     padding-right: 25px;
+}
+
+#draggable {
+    -ms-touch-action: none;
 }
 
 
