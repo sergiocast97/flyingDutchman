@@ -96,6 +96,10 @@ function subAmount2(price){
 
 }
 
+/** These functions are used for Drag n Drop in the menu, this will replace the previous add-function when it's done**/
+
+// TODO: Drag n Drop working in tablet mode, right now only working in browser mode
+
 function allowDrop(event) {
     event.preventDefault();
 }
