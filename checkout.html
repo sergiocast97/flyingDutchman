@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title class="lang" key="checkout"></title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="view/index.css">
+
+    <!-- JQuery -->
+    <script src="model/jquery-3.3.1.min.js"></script>
+    <script src="view/js/checkout.js"></script>
+
+    <!-- Language-->
+    <script src="model/lang_string.js"></script>
+    <script src="control/language.js"></script>
+
+    <!-- Beverages -->
+    <script src="model/Beverages.js"></script>
+    <script src="control/loadBeverages.js"></script>
+
+    <!-- Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Login -->
+    <script src="control/login.js" id="login"></script>
+
+    <!-- Menu -->
+    <script src="control/menu.js"></script>
+    <script src="control/tray.js"></script>
+
+    <!-- Database Loader -->
+    <script src="model/loader.js"></script>
+
+</head>
+
+<body id="background">
+
+    <div class="floatLanguage">
+        <div class="languageSelection">
+            <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
+            <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
+        </div>
+    </div>
+
+    <div class="checkout-panel">
+        
+        <div class="panel-body">
+            <h1 class="title lang" key="checkout"></h1>
+    
+            <div class="progress-bar">
+                <!--<div class="step active"></div>-->
+                <div class="step active"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+            </div>
+    
+            <div class="paymentArea">
+
+                <div class="payment-method">
+
+                    <div class="method card">
+
+                        <div class="card-logos">
+                            <img src="view/img/icons/visa.svg" alt="Visa">
+                            <img src="view/img/icons/mastercard.svg" alt="Mastercard">
+                        </div>
+
+                        <div class="radio-input lang" key="option_card"></div>
+                    </div>
+
+                    <div class="method credit">
+                        <div class="credit-logo">
+                            <img src="view/img/icons/credit.svg" alt="Credit">
+                        </div>
+
+                        <div class="radio-input lang" key="option_credit"></div>
+                    </div>
+
+                </div>
+        
+                <div class="inputArea">
+
+                    <!--input-field for card payment-->
+                    <div class="input-fields" id="card-field" >
+                            
+                        <!-- Cardholder name -->
+                        <div class="singleInput">
+                            <!--label for="cardholder">Cardholder's Name</label-->
+                            <input type="text" id="cardholder" class="lang" key="cardholder" placeholder="Cardholder's Name">
+                        </div>
+
+                        <!-- Card Number-->
+                        <div class="singleInput">
+                            <!--label for="cardnumber">Card Number</label-->
+                            <input type="password" id="cardnumber" class="lang" key="cardnumber" placeholder="Card Number">
+                        </div>
+
+                        <div class="singleInput">
+                            <!-- label for="date">Valid thru</label-->
+                            <input type="text" id="date" class="lang" key="expiry_date" placeholder="Expiry Date (MM/YY)">
+                        </div>
+
+                        <div class="singleInput">
+                            <!-- label for="verification">CVV / CVC *</label -->
+                            <input type="password" id="verification" class="lang" key="cvc" placeholder="CVV/CVC">
+                        </div>
+
+                        <div class="panel-footer" id="card-panel-footer">
+                            <button class="btn back-btn lang" key="back"></button>
+                            <button class="btn next-btn lang" key="confirm_pay"></button>
+                        </div>
+
+                    </div>
+
+                    <!--input-field for Credit payment-->
+                    <div class="input-fields" id="credit-field" >
+
+                        <div class="chargeCredit singleInput lang" key="your_credit"></div>
+
+                        <div class="panel-footer" id="credit-panel-footer">
+                            <button class="btn back-btn lang" key="back"></button>
+                            <button class="btn next-btn lang" key="confirm_pay"></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>

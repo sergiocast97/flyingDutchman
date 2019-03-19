@@ -21,6 +21,16 @@ var language_list = {
         "cider"         : "Cider",
         "spirit"        : "Spirit",
         "wine"          : "Wine",
+        "checkout"      : "Checkout",
+        "option_card"   : "Credit / Debit Card",
+        "option_credit" : "Flying Dutchman Credit",
+        "cardholder"    : "Cardholder's Name",
+        "cardnumber"    : "Card Number",
+        "expiry_date"   : "Expiry Date (MM/YY)",
+        "cvc"           : "CVV/CVC",
+        "back"          : "Back",
+        "confirm_pay"   : "Confirm Payment",
+        "your_credit"   : "Your credit:"
     },
 
     "sv" : {
@@ -39,5 +49,15 @@ var language_list = {
         "cider"         : "Cider",
         "spirit"        : "Spritdryck",
         "wine"          : "Vin",
+        "checkout"      : "Kassa",
+        "option_card"   : "Kreditkort / Betalkort",
+        "option_credit" : "Flying Dutchman Kredit",
+        "cardholder"    : "Kortinnehavarens Namn",
+        "cardnumber"    : "Kortnummer",
+        "expiry_date"   : "Utgångsdatum (MM/YY)",
+        "cvc"           : "CVV/CVC",
+        "back"          : "Tillbaka",
+        "confirm_pay"   : "Bekräfta Betalning",
+        "your_credit"   : "Din kredit:",
     }
 };
