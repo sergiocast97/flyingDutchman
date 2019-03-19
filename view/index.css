@@ -253,7 +253,7 @@ button:focus{
 
 .tabMenu {
 
-    top: 0;
+    bottom: 0;
     position: fixed;
     width: 100%;
 
