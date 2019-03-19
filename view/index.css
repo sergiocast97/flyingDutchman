@@ -196,6 +196,7 @@ button:focus{
     align-items: center; 
 }
 
+
 .userDetails {
     display: flex;
     flex-direction: column;
@@ -398,6 +399,28 @@ button:focus{
     font-weight: bolder;
 }
 
+/* Favourites */
+.favPanel {
+    padding: 25px;
+    margin: 20px;
+    width: 55%;
+    height: 70%;
+
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.backButton {
+    margin: 20px;
+    width: 5%;
+    border: none;
+    background-color: #EEE;
+    color: #222;
+    transition: 0.25s;
+    border-radius: 2px;
+}
+
 /**
  * ID focused css
  * Styling for unique elements
@@ -434,7 +457,6 @@ button:focus{
     -ms-touch-action: none;
 }
 
-
 /*
 #userBackground{
     z-index: -1;
@@ -464,3 +486,4 @@ button:focus{
         margin-bottom: 0%;
     }
 }
+

@@ -21,6 +21,7 @@ var language_list = {
         "cider"         : "Cider",
         "spirit"        : "Spirit",
         "wine"          : "Wine",
+        "your_tray"     : "Your Tray",
     },
 
     "sv" : {
@@ -39,5 +40,6 @@ var language_list = {
         "cider"         : "Cider",
         "spirit"        : "Spritdryck",
         "wine"          : "Vin",
+        "your_tray"     : "Din Bricka",
     }
 };
