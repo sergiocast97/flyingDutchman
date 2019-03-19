@@ -70,21 +70,13 @@ function drop(event){
     var newTrayItem = document.getElementById(data);
     newTrayItem.className = "trayItem";
 
-    newTrayItem.addEventListener('click', () => {removeFromTray(newTrayItem);subAmount(newTrayItem)});
-    console.log(newTrayItem);
+    var tray = document.getElementById("tray");
 
-    tray = document.getElementById("tray");
-    tray.appendChild(newTrayItem);
+    var nodeCopy = newTrayItem.cloneNode(true);
+    nodeCopy.addEventListener('click', () => {removeFromTray(nodeCopy);subAmount(nodeCopy)});
 
-    var tray_ul= document.getElementById("trayTempList");
-    var tray_li = document.createElement("tray_li");
-    tray_li.id = li.id;
-    alert(tray_li.id);
-    tray_li.innerHTML = li.innerHTML;
-    //alert(tray_li.innerHTML);
-    tray_li.className = "trayListCopy";
-    tray_ul.appendChild(tray_li); //tray_ul save the items in tray as a copy, which can be retrieve after reset the tray
-
+    console.log(nodeCopy);
+    tray.appendChild(nodeCopy);
 
 }
 
