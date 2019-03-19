@@ -55,16 +55,14 @@
             <!--<a class="payBtn" id="payment" href="#popup">Pay Now</a>-->
         <a id="amount">0</a>
         </div>
+
         <ul class="tray" id="tray"></ul>
+
         <div class="trayBtn">
             <a class="payBtn" id="payment" href="#popup">Pay Now</a>
             <!--<Button class="payBtn" id="payment" href="#popup">Pay Now</Button>-->
             <Button class="resetBtn" id="reset" onclick="resetTray()">Reset</Button>
         </div>
-    </div>
-
-    <div class="tray_temp">
-        <ul class="trayTemp" id="trayTempList"></ul>
     </div>
 
     <div class="popupContainer" id="popup">
@@ -102,6 +100,7 @@
                         li.className = "draggable";
                         li.id = stout[3];
                         li.draggable = true;
+                        li.helper = 'clone';
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(stout[4]);
                         ul.appendChild(li);

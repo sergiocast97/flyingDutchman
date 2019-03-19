@@ -76,16 +76,6 @@ function drop(event){
     tray = document.getElementById("tray");
     tray.appendChild(newTrayItem);
 
-    var tray_ul= document.getElementById("trayTempList");
-    var tray_li = document.createElement("tray_li");
-    tray_li.id = li.id;
-    alert(tray_li.id);
-    tray_li.innerHTML = li.innerHTML;
-    //alert(tray_li.innerHTML);
-    tray_li.className = "trayListCopy";
-    tray_ul.appendChild(tray_li); //tray_ul save the items in tray as a copy, which can be retrieve after reset the tray
-
-
 }
 
 function resetTray(){
