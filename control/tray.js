@@ -70,11 +70,13 @@ function drop(event){
     var newTrayItem = document.getElementById(data);
     newTrayItem.className = "trayItem";
 
-    newTrayItem.addEventListener('click', () => {removeFromTray(newTrayItem);subAmount(newTrayItem)});
-    console.log(newTrayItem);
+    var tray = document.getElementById("tray");
 
-    tray = document.getElementById("tray");
-    tray.appendChild(newTrayItem);
+    var nodeCopy = newTrayItem.cloneNode(true);
+    nodeCopy.addEventListener('click', () => {removeFromTray(nodeCopy);subAmount(nodeCopy)});
+
+    console.log(nodeCopy);
+    tray.appendChild(nodeCopy);
 
 }
 
