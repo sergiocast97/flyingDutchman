@@ -50,10 +50,34 @@
     </div>
 
     <div class="trayContainer" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="trayHeaderElement">
         <h2>Your Tray</h2>
-        <ul class="tray" id="tray"></ul>
+            <!--<a class="payBtn" id="payment" href="#popup">Pay Now</a>-->
         <a id="amount">0</a>
+        </div>
+        <ul class="tray" id="tray"></ul>
+        <div class="trayBtn">
+            <a class="payBtn" id="payment" href="#popup">Pay Now</a>
+            <!--<Button class="payBtn" id="payment" href="#popup">Pay Now</Button>-->
+            <Button class="resetBtn" id="reset" onclick="resetTray()">Reset</Button>
+        </div>
     </div>
+
+    <div class="tray_temp">
+        <ul class="trayTemp" id="trayTempList"></ul>
+    </div>
+
+    <div class="popupContainer" id="popup">
+        <div class="popupMessage">
+            <h2>Confirm order?</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <button class="popupBtn" id="confirm" onclick="window.location.href='checkoutPage.html'">Yes</button>
+                <!--<button class="popupBtn" id="cancel">No</button>-->
+            </div>
+        </div>
+    </div>
+
     <!-- Beer Panel-->
     <div class="tabPanel" id="beersPanel">
 

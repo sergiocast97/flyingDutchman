@@ -40,6 +40,7 @@ input:focus {
     padding: 5px;
 }
 
+/*
 button {
     border: none;
     background-color: #555;
@@ -52,6 +53,7 @@ button {
     font-size: 12pt;
 }
 
+
 button:hover{
     background-color: #444;
 }
@@ -60,6 +62,7 @@ button:focus{
     outline: none;
     background-color: #666;
 }
+*/
 
 /*
  * Class focused css
@@ -330,8 +333,8 @@ button:focus{
 
 .tray {
     color: white;
-    overflow-y: scroll;
     margin: 10px 0;
+    overflow-y: scroll;
 }
 
 .trayItem {
@@ -351,6 +354,156 @@ button:focus{
 .trayItem:hover {
     background: #DDD;
 }
+
+.trayHeaderElement {
+    display: inline-flex;
+}
+
+.trayHeaderElement a{
+    margin-top: -5px;
+    margin-left: 200px;
+}
+
+
+.amount {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.payBtn {
+    font-size: 1em;
+    padding: 8px;
+    /*color: rgba(238, 190, 190, 0.521);*/
+    color: rgb(238, 186, 194);
+    border: 2px solid rgb(238, 186, 194);
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    text-align: center;
+}
+.payBtn:hover {
+    color: white;
+    background: rgb(218, 114, 114);
+    border: 2px solid rgb(218, 114, 114);
+}
+
+.payBtn:active {
+    color: white;
+    background: rgb(218, 114, 114);
+    border: 2px solid rgb(218, 114, 114);
+}
+
+.resetBtn {
+    font-size: 1em;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: white;
+    /*color: rgba(238, 190, 190, 0.521);*/
+    color: rgb(238, 186, 194);
+    border: 2px solid rgb(238, 186, 194);
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    text-align: center;
+}
+
+.resetBtn:hover {
+    background-color: gray;
+    color: white;
+    border: 2px solid white;
+}
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popupContainer:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popupMessage {
+    display: inline-block;
+    text-align: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    height: 20%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popupMessage .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popupMessage .content {
+    max-height: 30%;
+    overflow: auto;
+    margin-top: 70px;
+    padding: 5px;
+}
+
+.popupMessage .content {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+
+}
+
+
+
+.popupBtn{
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+    padding: 8px;
+    /*color: rgba(238, 190, 190, 0.521);*/
+    color: rgb(238, 186, 194);
+    border: 2px solid rgb(238, 186, 194);
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    text-align: center;
+}
+
+.popupBtn:hover {
+    color: white;
+    background: rgb(218, 114, 114);
+    border: 2px solid rgb(218, 114, 114);
+}
+
+/*@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popupMessage{
+    width: 70%;
+  }
+}*/
 
 .drinkPanel {
     height: 100%;
