@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title class="lang" key="favourites"></title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="view/index.css">
+
+    <!-- JQuery -->
+    <script src="model/jquery-3.3.1.min.js"></script>
+
+
+    <!-- Language-->
+    <script src="model/lang_string.js"></script>
+    <script src="control/language.js"></script>
+
+    <!-- Beverages -->
+    <script src="model/Beverages.js"></script>
+    <script src="control/loadBeverages.js"></script>
+
+    <!-- Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Login -->
+    <script src="control/login.js" id="login"></script>
+
+    <!-- Menu -->
+    <script src="control/menu.js"></script>
+    <script src="control/tray.js"></script>
+
+    <!-- Database Loader -->
+    <script src="model/loader.js"></script>
+
+</head>
+
+<body id="background">
+        <!-- Language settings -->
+        <div class="floatLanguage">
+                <div class="languageSelection">
+                    <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
+                    <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
+                </div>
+            </div>
+
+            <button class="backButton" onclick="window.location.href='home'" key="back">Back</button>
+
+        <div class="trayContainer" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <h2 class="lang" key="your_tray"></h2>
+                <ul class="tray" id="tray"></ul>
+                <a id="amount">0</a>
+        </div>
+
+        <!-- Favourites panel -->
+        <div class="favPanel">
+                <h2 class="lang" key="favourites"></h2>
+                <div class="favourites">
+                    
+                </div>
+        </div>
+        
+
+</body>
+</html>

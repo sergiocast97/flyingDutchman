@@ -197,6 +197,7 @@ button:focus{
     align-items: center; 
 }
 
+
 .userDetails {
     display: flex;
     flex-direction: column;
@@ -399,15 +400,36 @@ button:focus{
     font-weight: bolder;
 }
 
-/* Checkout */
+/* Favourites */
+.favPanel {
+    padding: 25px;
+    margin: 20px;
+    width: 55%;
+    height: 70%;
+
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.backButton {
+    margin: 20px;
+    width: 5%;
+    border: none;
+    background-color: #EEE;
+    color: #222;
+    transition: 0.25s;
+    border-radius: 2px;
+}
+
 
 .checkout-panel {
     align-self: center;
     width: 800px;
     padding: 25px;
 
-    background-color: #FFF;
     border-radius: 5px;
+    background-color: #FFF;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
     display: flex;
@@ -604,7 +626,6 @@ color:#154360;
     -ms-touch-action: none;
 }
 
-
 /*
 #userBackground{
     z-index: -1;
@@ -634,3 +655,4 @@ color:#154360;
         margin-bottom: 0%;
     }
 }
+

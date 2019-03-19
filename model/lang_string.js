@@ -30,8 +30,9 @@ var language_list = {
         "cvc"           : "CVV/CVC",
         "back"          : "Back",
         "confirm_pay"   : "Confirm Payment",
-        "your_credit"   : "Your credit:"
-    },
+        "your_credit"   : "Your credit:",
+        "your_tray"     : "Your Tray",
+    },  
 
     "sv" : {
         "welcome"       : "Välkommen",
@@ -59,5 +60,6 @@ var language_list = {
         "back"          : "Tillbaka",
         "confirm_pay"   : "Bekräfta Betalning",
         "your_credit"   : "Din kredit:",
+        "your_tray"     : "Din Bricka",
     }
 };
