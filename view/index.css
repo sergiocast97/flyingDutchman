@@ -427,6 +427,8 @@ button:focus{
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .popupContainer:target {
@@ -435,9 +437,9 @@ button:focus{
 }
 
 .popupMessage {
+    align-self: center;
     display: inline-block;
     text-align: center;
-    margin: 70px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -599,6 +601,7 @@ button:focus{
     justify-content: space-between;
 }
 
+
 .inputArea {
     width: 60%;
     height: 100%;
@@ -610,6 +613,16 @@ button:focus{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.payment-amount {
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.payment-quantity {
+    color: #666;
+    margin-left: 10px;
 }
 
 .method {

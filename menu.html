@@ -83,6 +83,19 @@
             <div class="content">
                 <button class="popupBtn" id="confirm" onclick="window.location.href='checkout.html'">Yes</button>
                 <!--<button class="popupBtn" id="cancel">No</button>-->
+                <script>
+                    document.getElementById("confirm").onclick = function(){
+                        //save data to localStorage
+                        if (window.localStorage) {
+                        localStorage.paymentAmount = document.getElementById("amount").innerHTML;
+                        location.href = 'checkout.html';
+                        }
+                        else{
+                            alert("NOT SUPPORT");
+                        }
+                    };
+                </script>
+                    
             </div>
         </div>
     </div>
