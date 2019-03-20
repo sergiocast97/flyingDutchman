@@ -3,7 +3,7 @@
  */
   
 /* Strings */
-var language_list = {
+const language_list = {
 
     "en" : {
         "welcome"       : "Welcome",
