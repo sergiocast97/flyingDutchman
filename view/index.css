@@ -944,6 +944,7 @@ color:#154360;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
 }
 
 .user_panel .details #name {
@@ -954,7 +955,17 @@ color:#154360;
     font-size: 20px;
 }
 
-.user_panel .logout {
+.user_panel .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_panel .links .link {
+    width: 30%;
+}
+
+.user_panel .link {
+    text-decoration: none;
     cursor: pointer;
     font-size: 12pt;
     text-align: center;
@@ -965,7 +976,7 @@ color:#154360;
     border-radius: 10px;
 }
 
-.user_panel .logout:hover{
+.user_panel .link:hover{
     background: #DDD;
 }
 .sidenav .closebtn:hover {

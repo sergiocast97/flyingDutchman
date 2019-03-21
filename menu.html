@@ -58,8 +58,18 @@
         <!-- a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a-->
 
         <div class="sidenav_login">
-            <button onclick="window.location.href='login'" class="lang" key="login"></button>
-            <button onclick="window.location.href='register'" class="lang" key="register"></button>
+
+                <div class="user_panel">
+
+                    <div class="details lang" key="welcome_text">   
+                    </div>
+
+                    <div class="links">
+                        <a class="lang link" href="login" key="login"></a>
+                        <a class="lang link" href="register" key="register"></a>
+                    </div>
+    
+                </div>
         </div>
 
         <div class="sidenav_user">
@@ -76,7 +86,7 @@
                     </div>
                 </div>
 
-                <a class="lang logout" onclick="logout()" key="logout"></a>
+                <a class="lang link" onclick="logout()" key="logout"></a>
 
             </div>
         </div>
