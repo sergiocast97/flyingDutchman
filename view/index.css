@@ -920,6 +920,6 @@ color:#154360;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
     visibility: hidden;
 }

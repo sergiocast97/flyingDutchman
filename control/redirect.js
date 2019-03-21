@@ -12,7 +12,6 @@ switch( $(location).attr("pathname").split('/')[2] ){
 
     case "favourites" :
     case "checkout" :
-    case "home":
         // If user is not logged, redirect to login
         if(sessionStorage.getItem("username") == null ){
             //alert("There's a user here");

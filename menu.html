@@ -41,6 +41,7 @@
 
     <!-- Sidenav -->
     <script src="view/js/sidenav.js"></script>
+    <script src="view/js/user_menu.js"></script>
 
 </head>
 
@@ -51,22 +52,26 @@
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     
-        <div class="languageSelection">
+        <div class="sidenav_language">
             <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
             <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
         </div>
 
-        <div class="button-container">
+        <div class="sidenav_login">
             <button onclick="window.location.href='login'" class="lang" key="login"></button>
             <button onclick="window.location.href='register'" class="lang" key="register"></button>
         </div>
 
-        <div id="name">
-            <!-- Name is loaded here -->
-        </div>
+        <div class="sidenav_user">
+            <div id="name">
+                <!-- Name is loaded here -->
+            </div>
+    
+            <div id="balance">
+                <!-- Balance is loaded here -->
+            </div>
 
-        <div id="balance">
-            <!-- Balance is loaded here -->
+            <button onclick="logout()" class="lang" key="logout">Logout</button>
         </div>
 
         <a class="tabCategory lang" id="tabBeers" href="#beersPanel" key="beer"></a>

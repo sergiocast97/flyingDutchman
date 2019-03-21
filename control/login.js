@@ -28,6 +28,15 @@ function login(){
 }
 
 /**
+ * Log the user out
+ */
+function logout(){
+    // Doesn't work
+    sessionStorage.setItem("username", null);
+    window.location = "menu";
+}
+
+/**
  * Register a new user on the databse
  */
 function register(){
