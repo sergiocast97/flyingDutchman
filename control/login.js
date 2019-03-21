@@ -17,7 +17,7 @@ function login(){
 
         if (user.includes(username) && user.includes(password)) {
             sessionStorage.setItem("username", user[1]);
-            window.location = "home";
+            window.location = "menu";
 
         } else {
             alert("Login not successful");
@@ -42,11 +42,11 @@ function register(){
 
         if (user.includes(username) && user.includes(password)) {
             sessionStorage.setItem("username", user[1]);
-            window.location = "home";
+            window.location = "menu";
 
         } else {
             alert("Login not successful");
-            window.location = "login";
+            window.location = "register";
 
         }
 

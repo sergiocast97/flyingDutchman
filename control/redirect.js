@@ -6,7 +6,7 @@ switch( $(location).attr("pathname").split('/')[2] ){
         // If user is logged, redirect to menu
         if(sessionStorage.getItem("username") != null ){
             //alert("There's a user here");
-            window.location.replace("menu")
+            window.location.replace("menu");
         }
     break;
 
@@ -16,7 +16,7 @@ switch( $(location).attr("pathname").split('/')[2] ){
         // If user is not logged, redirect to login
         if(sessionStorage.getItem("username") == null ){
             //alert("There's a user here");
-            window.location.replace("login")
+            window.location.replace("login");
         }
     break;
 
