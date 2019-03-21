@@ -864,7 +864,12 @@ color:#154360;
 
     background-color: #FFF;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.25s;
     
+}
+
+.navOpener:hover {
+    padding-right: 30px;
 }
 
 .navOpener img {

@@ -71,12 +71,12 @@
                 <!-- Balance is loaded here -->
             </div>
 
-            <button onclick="logout()" class="lang" key="logout">Logout</button>
+            <button onclick="logout()" class="lang" key="logout"></button>
         </div>
 
         <a class="tabCategory lang" id="tabBeers" href="#beersPanel" key="beer"></a>
         <a class="tabCategory lang" id="tabCiders" href="#cidersPanel" key="cider"></a>
-        <a class="tabCategory lang" id="tabSpirits" href="#spiritsPanel" key="spirit"></a>
+        <a class="tabCategory lang" id="tabSpirits" href="#spiritsPanel" key="whisky"></a>
         <a class="tabCategory lang" id="tabWines" href="#winesPanel" key="wine"></a>
 
             
@@ -93,12 +93,12 @@
 
             <!-- Beer Panel-->
             <div class="tabPanel" id="beersPanel">
-                <h2>Beers</h2>
+                <h2 class="lang" key="beer"></h2>
             
                 <ul class="tabs">
-                    <li rel="ale" class="active">Ale</li>
-                    <li rel="stout">Stout</li>
-                    <li rel="lager">Lager</li>
+                    <li rel="ale" class="lang active" key="ale"></li>
+                    <li rel="stout" class="lang" key="stout"></li>
+                    <li rel="lager" class="lang" key="lager">Lager</li>
                 </ul>
             
                 
@@ -172,7 +172,7 @@
             
             <!-- Cider panel -->
             <div class="tabPanel" id="cidersPanel">
-                <h2>Ciders</h2>
+                <h2 class="lang" key="cider"></h2>
                 <div id="ciders" class="drinkPanel` active">
                     <div class="loadDrink" id="loadCider">
                         <script>
@@ -198,7 +198,7 @@
             
             <!-- Spirits panel -->
             <div class="tabPanel" id="spiritsPanel">
-                <h2>Spirits</h2>
+                <h2 class="lang" key="whisky"></h2>
                 <!--ul class="tabs">
                     <li rel="whiskey" class="active">Whiskey</li>
                     <li rel="medium">Medium</li>
@@ -244,11 +244,11 @@
             
             <!-- Wine Panel -->
             <div class="tabPanel" id="winesPanel">
-                <h2>Wines</h2>
+                <h2 class="lang" key="wine"></h2>
                 <ul class="tabs">
-                    <li rel="red" class="active">Red</li>
-                    <li rel="white">White</li>
-                    <li rel="rose">Rosè</li>
+                    <li rel="red" class="lang active" key="red_wine"></li>
+                    <li rel="white"class="lang" key="white_wine"></li>
+                    <li rel="rose" class="lang" key="rose_wine"></li>
                 </ul>
             
                 <div id="red" class="drinkPanel active">
@@ -323,7 +323,7 @@
             <!-- Tray -->
             <div class="trayPanel" ondragover="allowDrop(event)" ondrop="drop(event)">
                 <div class="trayHeaderElement">
-                <h2>Tray:</h2>
+                <h2 class="lang" key="tray"></h2>
                     <!--<a class="payBtn" id="payment" href="#popup">Pay Now</a>-->
                 <a id="amount">0</a>
                 </div>
@@ -331,9 +331,9 @@
                 <ul class="tray" id="tray"></ul>
         
                 <div class="trayBtn">
-                    <a class="payBtn" id="payment" href="#popup">Pay Now</a>
+                    <a class="payBtn lang" id="payment" href="#popup" key="pay"></a>
                     <!--<Button class="payBtn" id="payment" href="#popup">Pay Now</Button>-->
-                    <Button class="resetBtn" id="reset" onclick="resetTray()">Reset</Button>
+                    <Button class="resetBtn lang" id="reset" onclick="resetTray()" key="reset"></Button>
                 </div>
             </div>
 
@@ -344,11 +344,10 @@
     <!-- Pop Up -->
     <div class="popupContainer" id="popup">
         <div class="popupMessage">
-            <h2>Confirm order?</h2>
+            <h2 class="lang" key="confirm_order"></h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <button class="popupBtn" id="confirm" onclick="window.location.href='checkout.html'">Yes</button>
-                <!--<button class="popupBtn" id="cancel">No</button>-->
+                <button class="popupBtn lang" id="confirm" onclick="window.location.href='checkout.html'" key="yes"></button>
                 <script>
                     document.getElementById("confirm").onclick = function(){
                         //save data to localStorage

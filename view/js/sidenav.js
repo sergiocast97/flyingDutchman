@@ -1,6 +1,6 @@
 /* Set the width of the side navigation to 250px */
 function openNav() {
-    $("#mySidenav").css('width','30%');
+    $("#mySidenav").css('width','25%');
     $(".dark").css({
         'visibility': 'visible',
         'opacity': '1',
