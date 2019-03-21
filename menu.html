@@ -364,13 +364,13 @@
             <h2 class="lang" key="confirm_order"></h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <button class="popupBtn lang" id="confirm" onclick="window.location.href='checkout.html'" key="yes"></button>
+                <button class="popupBtn lang" id="confirm" onclick="window.location.href='checkout'" key="yes"></button>
                 <script>
                     document.getElementById("confirm").onclick = function(){
                         //save data to localStorage
                         if (window.localStorage) {
                         localStorage.paymentAmount = document.getElementById("amount").innerHTML;
-                        location.href = 'checkout.html';
+                        location.href = 'checkout';
                         }
                         else{
                             alert("NOT SUPPORT");

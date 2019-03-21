@@ -1,4 +1,5 @@
 // Check the current location
+//alert($(location).attr("pathname").split('/')[2]);
 switch( $(location).attr("pathname").split('/')[2] ){
 
     case "register":
@@ -10,7 +11,6 @@ switch( $(location).attr("pathname").split('/')[2] ){
         }
     break;
 
-    case "favourites" :
     case "checkout" :
         // If user is not logged, redirect to login
         if(sessionStorage.getItem("username") == null ){
