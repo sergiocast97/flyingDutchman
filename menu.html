@@ -50,12 +50,12 @@
     <!-- Side navigation bar -->
     <div id="mySidenav" class="sidenav">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    
         <div class="sidenav_language">
             <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
             <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
         </div>
+
+        <!-- a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a-->
 
         <div class="sidenav_login">
             <button onclick="window.location.href='login'" class="lang" key="login"></button>
@@ -63,15 +63,22 @@
         </div>
 
         <div class="sidenav_user">
-            <div id="name">
-                <!-- Name is loaded here -->
-            </div>
-    
-            <div id="balance">
-                <!-- Balance is loaded here -->
-            </div>
 
-            <button onclick="logout()" class="lang" key="logout"></button>
+            <div class="user_panel">
+
+                <div class="details">
+                    <div id="name">
+                        <!-- Name is loaded here -->
+                    </div>
+    
+                    <div id="balance">
+                        <!-- Balance is loaded here -->
+                    </div>
+                </div>
+
+                <a class="lang logout" onclick="logout()" key="logout"></a>
+
+            </div>
         </div>
 
         <a class="tabCategory lang" id="tabBeers" href="#beersPanel" key="beer"></a>
