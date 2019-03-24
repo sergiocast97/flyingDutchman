@@ -38,9 +38,7 @@
     <!-- Menu -->
     <script src="control/menu.js"></script>
     <script src="control/tray.js"></script>
-
-    <!-- Checkout -->
-    <script src="view/js/checkout.js"></script>
+    <script src="control/checkout.js"></script>
 
 </head>
 
@@ -93,7 +91,12 @@
 
                     <div class="payment-amount">
                         <h2 class="checkout-amount lang" id="payment_amount" key="amount"></h2>
-                        <h2 class="payment-quantity"></h2>
+                        <h2 class="payment-quantity" id="payment-quantity">
+                            <script>
+                                var amount = getAmount();
+                                document.getElementById('payment-quantity').append(amount);
+                            </script>
+                        </h2>
                     </div>
 
                     <!--input-field for card payment-->
@@ -131,11 +134,18 @@
                     <!--input-field for Credit payment-->
                     <div class="input-fields" id="credit-field" >
 
-                        <div class="chargeCredit singleInput lang" key="your_credit"></div>
+                        <div class="chargeCredit singleInput lang" key="your_credit" id="credit">
+                            <script>
+                                window.onload = function(){
+                                    var credit = getBalance(sessionStorage.getItem('username'));
+                                    document.getElementById('credit').append(" " + credit + " kr");
+                                }
+                            </script>
+                        </div>
 
                         <div class="panel-footer" id="credit-panel-footer">
                             <button class="btn back-btn lang" key="back"></button>
-                            <button class="btn next-btn lang" key="confirm_pay"></button>
+                            <button class="btn next-btn lang" key="confirm_pay" onclick="payCredit(localStorage.getItem('paymentAmount'))"></button>
                         </div>
 
                     </div>
