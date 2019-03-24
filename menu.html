@@ -62,12 +62,15 @@
 
     <div class="trayContainer" ondragover="allowDrop(event)" ondrop="drop(event)">
         <div class="trayHeaderElement">
-        <h2>Your Tray</h2>
-            <!--<a class="payBtn" id="payment" href="#popup">Pay Now</a>-->
-        <a id="amount">0</a>
+            <h2>Your Tray</h2>
         </div>
 
         <ul class="tray" id="tray"></ul>
+
+        <div class="amount-container">
+            <div class="amount">kr</div>
+            <div id="amount" class="amount">0</div>
+        </div>
 
         <div class="trayBtn">
             <a class="payBtn" id="payment" href="#popup">Pay Now</a>
@@ -127,7 +130,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(stout[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + stout[0] + "</span>" + " " + stout[1] + " " + "<span class=price classname=price>" + stout[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + stout[0] + "</span>" +
+                            " " + "<span class='type'>" + stout[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + stout[4] + "</span>";
                     });
 
                 </script>
@@ -150,7 +156,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(ale[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + ale[0] + "</span>" + " " + ale[1] + " " + "<span class=price>" + ale[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + ale[0] + "</span>" +
+                            " " + "<span class='type'>" + ale[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + ale[4] + "</span>";
                     });
                 </script>
             </div>
@@ -172,7 +181,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(lager[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + lager[0] + "</span>" + " " + lager[1] + " " + "<span class=price>" + lager[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + lager[0] + "</span>" +
+                            " " + "<span class='type'>" + lager[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + lager[4] + "</span>";
                     });
                 </script>
             </div>
@@ -198,7 +210,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(cider[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + cider[0] + "</span>" + " " + cider[1] + " " + "<span class=price>" + cider[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + cider[0] + "</span>" +
+                            " " + "<span class='type'>" + cider[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + cider[4] + "</span>";
                     });
                 </script>
             </div>
@@ -230,7 +245,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(whiskey[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" + " " + whiskey[1] + " " + "<span class=price>" + whiskey[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" +
+                            " " + "<span class='type'>" + whiskey[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + whiskey[4] + "</span>";
                     });
                 </script>
             </div>
@@ -275,7 +293,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(redWine[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" + " " + redWine[1] + " " + "<span class=price>" + redWine[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" +
+                            " " + "<span class='type'>" + redWine[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + redWine[4] + "</span>";
                     });
                 </script>
             </div>
@@ -296,7 +317,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(whiteWine[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" + " " + whiteWine[1] + " " + "<span class=price>" + whiteWine[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" +
+                            " " + "<span class='type'>" + whiteWine[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + whiteWine[4] + "</span>";
                     });
                 </script>
             </div>
@@ -317,7 +341,10 @@
                         li.ondragstart = () => drag(event);
                         li.ondragend = () => addAmount(roseWine[4]);
                         ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" + " " + roseWine[1] + " " + "<span class=price>" + roseWine[4] + "</span>";
+                        li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" +
+                            " " + "<span class='type'>" + roseWine[1] +  "</span>" +
+                            " " + "<span class='price'>" + "kr" + "</span>" +
+                            " " + "<span class=price classname=price>" + roseWine[4] + "</span>";
                     });
                 </script>
             </div>
