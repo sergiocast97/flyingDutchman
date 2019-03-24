@@ -285,7 +285,7 @@ button:focus{
 .tabPanel {
     padding: 25px;
     margin: 20px;
-    width: 60%;
+    max-width: 60%;
 
     background-color: #FFF;
     border-radius: 5px;
@@ -315,7 +315,7 @@ button:focus{
     padding: 0;
 }
 
-.trayContainer {
+.trayContainer{
 
     margin: 20px;
     width: 30%;
@@ -323,6 +323,7 @@ button:focus{
     position: fixed;
     right: 0;
     top: 8%;
+    float: left;
 
     padding: 25px;
     border-radius: 5px;
@@ -366,10 +367,16 @@ button:focus{
     margin-left: 200px;
 }
 
+.amount-container {
+    float: left;
+}
 
 .amount {
-    margin-top: 20px;
-    margin-left: 0px;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #333333;
+    float: right;
+
 }
 
 .payBtn {
@@ -549,10 +556,16 @@ button:focus{
     float: right;
     color: #777777;
     font-size: 90%;
+    margin-left: 5px;
 }
 
 .brand {
     font-weight: bolder;
+    font-size: 14px;
+}
+
+.type {
+    font-size: 12px;
 }
 
 /* Favourites */
@@ -782,11 +795,13 @@ color:#154360;
     margin-top: 1100px;
 }
 
+/*
 #amount {
     align-self: flex-end;
     font-size: 24px;
     padding-right: 25px;
 }
+*/
 
 #draggable {
     -ms-touch-action: none;
