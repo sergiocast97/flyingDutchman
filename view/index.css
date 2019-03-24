@@ -257,6 +257,16 @@ button:focus{
     display: flex;
 }
 
+.logo-menu-container{
+    margin-top: 50px;
+}
+
+.logo{
+    display: block;
+    max-width: 400px;
+    margin: 0 auto 50px;
+}
+
 .drinkContainer {
     width: 60%;
     padding: 50px;
@@ -275,6 +285,15 @@ button:focus{
 
     .trayContainer {
         height: 400%;
+    }
+
+    .logo-menu-container{
+        margin-top: 20px;
+    }
+
+    .logo {
+        max-width: 400px;
+        margin: 0 auto 0;
     }
 
 }
@@ -811,14 +830,14 @@ color:#154360;
     border: 5px solid #FFF;
 }
 
-/*
+
 
 #amount {
     align-self: flex-end;
     font-size: 24px;
     padding-right: 25px;
 }
-*/
+
 
 
 #draggable {
