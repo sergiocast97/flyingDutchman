@@ -15,6 +15,16 @@ body, html{
     height: 100%;
 }
 
+::-webkit-scrollbar {
+    padding: 5px;
+    width: 5px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 5px;
+}
+
 h1 {
     font-size: 20pt;
 }
@@ -62,6 +72,7 @@ button:focus{
     outline: none;
     background-color: #666;
 }
+
 
 
 /*
@@ -276,7 +287,6 @@ button:focus{
 .trayContainer {
     width: 40%;
     height: 200%;
-
     padding: 50px;
 }
 
@@ -347,12 +357,13 @@ button:focus{
 
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .tray {
     color: white;
     margin: 10px 0;
-    overflow-y: scroll;
+    max-height: 40%;
 }
 
 .trayItem {
@@ -382,9 +393,26 @@ button:focus{
     margin-left: 200px;
 }
 
-.amount {
+.tray-bottom{
+    overflow-y: auto;
+    background: #EEEEEE;
+    padding: 25px;
     margin-top: 20px;
-    margin-left: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150px;
+    bottom: 150px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.amount {
+    margin-left: 5px;
+    float: right;
+    color: #333333;
+    font-weight: bold;
+    font-size: 24px;
+
+
 }
 
 .trayBtn{
@@ -575,6 +603,7 @@ button:focus{
     border-radius: 5px;
     transition: 0.25s;
     touch-action: none;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1030px){
@@ -831,12 +860,13 @@ color:#154360;
 }
 
 
-
+/*
 #amount {
     align-self: flex-end;
     font-size: 24px;
     padding-right: 25px;
 }
+*/
 
 
 
