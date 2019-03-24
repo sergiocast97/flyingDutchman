@@ -7,8 +7,12 @@
 // Default language
 $(function(){
         
-    // Get the language from the hmtl tag
-    let lang = $(document.documentElement).attr('lang');
+    // Get the language from the session storage
+    let lang = sessionStorage.language;
+    if( lang == null ){
+        // If no language is stored, select default
+        lang = $(document.documentElement).attr('lang');
+    }
     //alert("Language: " + lang);
 
     // Change the opacity
@@ -39,6 +43,8 @@ $(function(){
 
         // Select the language by id
         let lang = $(this).attr('id');
+        // Save the language selection
+        sessionStorage.setItem("language", lang);
         //alert("Language: " + lang);
 
         // Change the opacity

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<rect y="85.333" style="fill:#0052B4;" width="512" height="341.337"/>
-<polygon style="fill:#FFDA44;" points="192,85.33 128,85.33 128,223.996 0,223.996 0,287.996 128,287.996 128,426.662 192,426.662 
-	192,287.996 512,287.996 512,223.996 192,223.996 "/>
+<path style="fill:#4173CD;" d="M473.655,88.275H38.345C17.167,88.275,0,105.442,0,126.62V385.38
+	c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.62
+	C512,105.442,494.833,88.275,473.655,88.275z"/>
+<polygon style="fill:#FFE15A;" points="512,229.516 211.862,229.516 211.862,88.275 158.897,88.275 158.897,229.516 0,229.516 
+	0,282.482 158.897,282.482 158.897,423.724 211.862,423.724 211.862,282.482 512,282.482 "/>
 <g>
 </g>
 <g>

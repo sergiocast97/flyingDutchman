@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script>
-    window.location.replace("menu");
-    </script>
     
     <title class="lang" key="welcome"></title>
     
@@ -17,9 +13,16 @@
 
     <!-- JQuery -->
     <script src="model/jquery-3.3.1.min.js"></script>
-    
-    <!-- Database Loader -->
+
+    <!-- Load Database -->
     <script src="model/loader.js"></script>
+
+    <!-- Load Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Redirection -->
+    <script src="control/redirect.js"></script>
 
     <!-- Language-->
     <script src="model/lang_string.js"></script>
@@ -27,10 +30,6 @@
 
     <!-- Beverages -->
     <script src="model/Beverages.js"></script>
-
-    <!-- Users -->
-    <script src="model/DBLoaded.js"></script>
-    <script src="control/userLoader.js"></script>
 
     <!-- Login -->
     <script src="control/login.js" id="login"></script>

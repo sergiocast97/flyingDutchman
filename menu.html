@@ -14,6 +14,15 @@
     <!-- JQuery -->
     <script src="model/jquery-3.3.1.min.js"></script>
 
+    <!-- Load Database -->
+    <script src="model/loader.js"></script>
+
+    <!-- Load Users -->
+    <script src="model/DBLoaded.js"></script>
+    <script src="control/userLoader.js"></script>
+
+    <!-- Redirection -->
+    <script src="control/redirect.js"></script>
 
     <!-- Language-->
     <script src="model/lang_string.js"></script>
@@ -23,10 +32,6 @@
     <script src="model/Beverages.js"></script>
     <script src="control/loadBeverages.js"></script>
 
-    <!-- Users -->
-    <script src="model/DBLoaded.js"></script>
-    <script src="control/userLoader.js"></script>
-
     <!-- Login -->
     <script src="control/login.js" id="login"></script>
 
@@ -34,321 +39,375 @@
     <script src="control/menu.js"></script>
     <script src="control/tray.js"></script>
 
-    <!-- Database Loader -->
-    <script src="model/loader.js"></script>
+    <!-- Sidenav -->
+    <script src="view/js/sidenav.js"></script>
+    <script src="view/js/user_menu.js"></script>
 
 </head>
 
 <body id="background">
 
-    <div class="floatLanguage">
-        <div class="languageSelection">
-            <div class="button-container">
-                <button onclick="window.location.href='login'" class="lang" key="login"></button>
-                <button onclick="window.location.href='register'" class="lang" key="register"></button>
-            </div>
+    <!-- Side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+
+        <div class="sidenav_language">
             <img class="language translate" id="en" src="view/img/icons/uk.svg" alt="EN">
             <img class="language translate" id="sv" src="view/img/icons/se.svg" alt="SE">
         </div>
-    </div>
 
-    <!-- Access tab -->
-    <div class="tabMenu">
+        <!-- a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a-->
+
+        <div class="sidenav_login">
+
+                <div class="user_panel">
+
+                    <div class="details lang" key="welcome_text">
+                    </div>
+
+                    <div class="links">
+                        <a class="lang link" href="login" key="login"></a>
+                        <a class="lang link" href="register" key="register"></a>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="sidenav_user">
+
+            <div class="user_panel">
+
+                <div class="details">
+                    <div id="name">
+                        <!-- Name is loaded here -->
+                    </div>
+
+                    <div id="balance">
+                        <!-- Balance is loaded here -->
+                    </div>
+                </div>
+
+                <a class="lang link" onclick="logout()" key="logout"></a>
+
+            </div>
+        </div>
+
         <a class="tabCategory lang" id="tabBeers" href="#beersPanel" key="beer"></a>
         <a class="tabCategory lang" id="tabCiders" href="#cidersPanel" key="cider"></a>
-        <a class="tabCategory lang" id="tabSpirits" href="#spiritsPanel" key="spirit"></a>
+        <a class="tabCategory lang" id="tabSpirits" href="#spiritsPanel" key="whisky"></a>
         <a class="tabCategory lang" id="tabWines" href="#winesPanel" key="wine"></a>
+
+
     </div>
 
-    <div class="trayContainer" ondragover="allowDrop(event)" ondrop="drop(event)">
-        <div class="trayHeaderElement">
-            <h2>Your Tray</h2>
-        </div>
-
-        <ul class="tray" id="tray"></ul>
-
-        <div class="amount-container">
-            <div class="amount">kr</div>
-            <div id="amount" class="amount">0</div>
-        </div>
-
-        <div class="trayBtn">
-            <a class="payBtn" id="payment" href="#popup">Pay Now</a>
-            <!--<Button class="payBtn" id="payment" href="#popup">Pay Now</Button>-->
-            <Button class="resetBtn" id="reset" onclick="resetTray()">Reset</Button>
-        </div>
+    <div class="navOpener" onclick="openNav();">
+        <img id="burger" src="view/img/icons/menu.svg" alt="&#x2630;"/>
     </div>
 
+
+    <div id="main" onclick="closeNav()">
+
+        <div class="drinkContainer">
+
+            <!-- Beer Panel-->
+            <div class="tabPanel" id="beersPanel">
+                <h2 class="lang" key="beer"></h2>
+
+                <ul class="tabs">
+                    <li rel="ale" class="lang active" key="ale"></li>
+                    <li rel="stout" class="lang" key="stout"></li>
+                    <li rel="lager" class="lang" key="lager">Lager</li>
+                </ul>
+
+
+                <div id="ale" class="drinkPanel active">
+                    <div class="loadDrink" id="loadAle">
+                        <script>
+                            var ale = loadBeverage("\u00c3\u2013l, Ale");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadAle').appendChild(ul);
+
+                            ale.forEach(function(ale){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = ale[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(ale[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + ale[0] + "</span>" +
+                                    " " + "<span class='type'>" + ale[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + ale[4] + "</span>";
+                            });
+                            </script>
+                    </div>
+                </div>
+
+                <div id="stout" class="drinkPanel">
+                    <div class="loadDrink" id="loadStout">
+                        <script>
+                            var stout = loadBeverage("\u00c3\u2013l, Porter och Stout");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadStout').appendChild(ul);
+
+                            stout.forEach(function(stout){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.draggable = true;
+                                li.id = stout[3];
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(stout[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + stout[0] + "</span>" +
+                                    " " + "<span class='type'>" + stout[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + stout[4] + "</span>";
+                            });
+
+                        </script>
+                    </div>
+                </div>
+
+                <div id="lager" class="drinkPanel">
+                    <div class="loadDrink" id="loadLager">
+                        <script>
+                            var lager = loadBeverage("\u00c3\u2013l, Ljus lager");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadLager').appendChild(ul);
+
+                            lager.forEach(function(lager){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = lager[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(lager[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + lager[0] + "</span>" +
+                                    " " + "<span class='type'>" + lager[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + lager[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cider panel -->
+            <div class="tabPanel" id="cidersPanel">
+                <h2 class="lang" key="cider"></h2>
+                <div id="ciders" class="drinkPanel` active">
+                    <div class="loadDrink" id="loadCider">
+                        <script>
+                            var cider = loadBeverage("Cider");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadCider').appendChild(ul);
+
+                            cider.forEach(function(cider){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = cider[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(cider[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + cider[0] + "</span>" +
+                                    " " + "<span class='type'>" + cider[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + cider[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spirits panel -->
+            <div class="tabPanel" id="spiritsPanel">
+                <h2 class="lang" key="whisky"></h2>
+                <!--ul class="tabs">
+                    <li rel="whiskey" class="active">Whiskey</li>
+                    <li rel="medium">Medium</li>
+                    <li rel="light">Light</li>
+                </ul-->
+
+                <div id="whiskey" class="drinkPanel active">
+                    <div class="loadDrink" id="loadWhiskey">
+                        <script>
+                            var whiskey = loadBeverage("Whisky, Malt");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadWhiskey').appendChild(ul);
+
+                            whiskey.forEach(function(whiskey){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = whiskey[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(whiskey[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" +
+                                    " " + "<span class='type'>" + whiskey[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + whiskey[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+                <!--div id="medium" class="drinkPanel">
+                    content2<br/>
+                    content2<br/>
+                    content2<br/>
+                    content2<br/>
+                    content2<br/>
+                </div>
+                <div id="light" class="drinkPanel">
+                    content3<br/>
+                    content3<br/>
+                    content3<br/>
+                    content3<br/>
+                    content3<br/>
+                </div-->
+            </div>
+
+            <!-- Wine Panel -->
+            <div class="tabPanel" id="winesPanel">
+                <h2 class="lang" key="wine"></h2>
+                <ul class="tabs">
+                    <li rel="red" class="lang active" key="red_wine"></li>
+                    <li rel="white"class="lang" key="white_wine"></li>
+                    <li rel="rose" class="lang" key="rose_wine"></li>
+                </ul>
+
+                <div id="red" class="drinkPanel active">
+                    <div class="loadDrink" id="loadRedWine">
+                        <script>
+                            var redWine = loadBeverage("R\u00c3\u00b6tt vin");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadRedWine').appendChild(ul);
+
+                            redWine.forEach(function(redWine){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = redWine[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(redWine[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" +
+                                    " " + "<span class='type'>" + redWine[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + redWine[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div id="white" class="drinkPanel">
+                    <div class="loadDrink" id="loadWhiteWine">
+                        <script>
+                            var whiteWine = loadBeverage("Vitt vin");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadWhiteWine').appendChild(ul);
+
+                            whiteWine.forEach(function(whiteWine){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = whiteWine[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(whiteWine[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" +
+                                    " " + "<span class='type'>" + whiteWine[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + whiteWine[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div id="rose" class="drinkPanel">
+                    <div class="loadDrink" id="loadRoseWine">
+                        <script>
+                            var roseWine = loadBeverage("Ros\u00c3\u00a9vin");
+                            var ul = document.createElement('ul');
+                            ul.id = "beverageList";
+                            document.getElementById('loadRoseWine').appendChild(ul);
+
+                            roseWine.forEach(function(roseWine){
+                                var li = document.createElement('li');
+                                li.className = "draggable";
+                                li.id = roseWine[3];
+                                li.draggable = true;
+                                li.ondragstart = () => drag(event);
+                                li.ondragend = () => addAmount(roseWine[4]);
+                                ul.appendChild(li);
+                                li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" +
+                                    " " + "<span class='type'>" + roseWine[1] +  "</span>" +
+                                    " " + "<span class='price'>" + "kr" + "</span>" +
+                                    " " + "<span class=price classname=price>" + roseWine[4] + "</span>";
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="trayContainer">
+
+            <!-- Tray -->
+            <div class="trayPanel" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <div class="trayHeaderElement">
+                <h2 class="lang" key="tray"></h2>
+                    <!--<a class="payBtn" id="payment" href="#popup">Pay Now</a>-->
+                <a id="amount">0</a>
+                </div>
+
+                <ul class="tray" id="tray"></ul>
+
+                <div class="trayBtn">
+                    <a class="payBtn lang" id="payment" href="#popup" key="pay"></a>
+                    <!--<Button class="payBtn" id="payment" href="#popup">Pay Now</Button>-->
+                    <a class="resetBtn lang" id="reset" onclick="resetTray()" key="reset"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Pop Up -->
     <div class="popupContainer" id="popup">
         <div class="popupMessage">
-            <h2>Confirm order?</h2>
+            <h2 class="lang" key="confirm_order"></h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <button class="popupBtn" id="confirm" onclick="window.location.href='checkout.html'">Yes</button>
-                <!--<button class="popupBtn" id="cancel">No</button>-->
+                <button class="popupBtn lang" id="confirm" onclick="window.location.href='checkout'" key="yes"></button>
                 <script>
                     document.getElementById("confirm").onclick = function(){
                         //save data to localStorage
                         if (window.localStorage) {
                         localStorage.paymentAmount = document.getElementById("amount").innerHTML;
-                        location.href = 'checkout.html';
+                        location.href = 'checkout';
                         }
                         else{
                             alert("NOT SUPPORT");
                         }
                     };
                 </script>
-                    
+
             </div>
         </div>
     </div>
 
-    <!-- Beer Panel-->
-    <div class="tabPanel" id="beersPanel">
-
-        <h2>Beers</h2>
-
-        <ul class="tabs">
-            <li rel="stout" class="active">Stout</li>
-            <li rel="ale">Ale</li>
-            <li rel="lager">Lager</li>
-        </ul>
-
-        <div id="stout" class="drinkPanel active">
-            <div class="loadDrink" id="loadStout">
-                <script>
-                    var stout = loadBeverage("\u00c3\u2013l, Porter och Stout");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadStout').appendChild(ul);
-
-                    stout.forEach(function(stout){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.draggable = true;
-                        li.id = stout[3];
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(stout[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + stout[0] + "</span>" +
-                            " " + "<span class='type'>" + stout[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + stout[4] + "</span>";
-                    });
-
-                </script>
-            </div>
-        </div>
-
-        <div id="ale" class="drinkPanel">
-            <div class="loadDrink" id="loadAle">
-                <script>
-                    var ale = loadBeverage("\u00c3\u2013l, Ale");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadAle').appendChild(ul);
-
-                    ale.forEach(function(ale){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = ale[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(ale[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + ale[0] + "</span>" +
-                            " " + "<span class='type'>" + ale[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + ale[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-
-        <div id="lager" class="drinkPanel">
-            <div class="loadDrink" id="loadLager">
-                <script>
-                    var lager = loadBeverage("\u00c3\u2013l, Ljus lager");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadLager').appendChild(ul);
-
-                    lager.forEach(function(lager){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = lager[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(lager[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + lager[0] + "</span>" +
-                            " " + "<span class='type'>" + lager[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + lager[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="tabPanel" id="cidersPanel">
-        <h2>Ciders</h2>
-        <div id="ciders" class="drinkPanel` active">
-            <div class="loadDrink" id="loadCider">
-                <script>
-                    var cider = loadBeverage("Cider");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadCider').appendChild(ul);
-
-                    cider.forEach(function(cider){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = cider[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(cider[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + cider[0] + "</span>" +
-                            " " + "<span class='type'>" + cider[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + cider[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="tabPanel" id="spiritsPanel">
-        <h2>Spirits</h2>
-        <ul class="tabs">
-            <li rel="whiskey" class="active">Whiskey</li>
-            <li rel="medium">Medium</li>
-            <li rel="light">Light</li>
-        </ul>
-
-        <div id="whiskey" class="drinkPanel active">
-            <div class="loadDrink" id="loadWhiskey">
-                <script>
-                    var whiskey = loadBeverage("Whisky, Malt");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadWhiskey').appendChild(ul);
-
-                    whiskey.forEach(function(whiskey){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = whiskey[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(whiskey[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + whiskey[0] + "</span>" +
-                            " " + "<span class='type'>" + whiskey[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + whiskey[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-        <div id="medium" class="drinkPanel">
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
-            content2<br/>
-        </div>
-        <div id="light" class="drinkPanel">
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
-            content3<br/>
-        </div>
-    </div>
-
-    <div class="tabPanel" id="winesPanel">
-        <h2>Wines</h2>
-        <ul class="tabs">
-            <li rel="red" class="active">Red</li>
-            <li rel="white">White</li>
-            <li rel="rose">Rosè</li>
-        </ul>
-
-        <div id="red" class="drinkPanel active">
-            <div class="loadDrink" id="loadRedWine">
-                <script>
-                    var redWine = loadBeverage("R\u00c3\u00b6tt vin");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadRedWine').appendChild(ul);
-
-                    redWine.forEach(function(redWine){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = redWine[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(redWine[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + redWine[0] + "</span>" +
-                            " " + "<span class='type'>" + redWine[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + redWine[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-        <div id="white" class="drinkPanel">
-            <div class="loadDrink" id="loadWhiteWine">
-                <script>
-                    var whiteWine = loadBeverage("Vitt vin");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadWhiteWine').appendChild(ul);
-
-                    whiteWine.forEach(function(whiteWine){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = whiteWine[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(whiteWine[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + whiteWine[0] + "</span>" +
-                            " " + "<span class='type'>" + whiteWine[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + whiteWine[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
-        <div id="rose" class="drinkPanel">
-            <div class="loadDrink" id="loadRoseWine">
-                <script>
-                    var roseWine = loadBeverage("Ros\u00c3\u00a9vin");
-                    var ul = document.createElement('ul');
-                    ul.id = "beverageList";
-                    document.getElementById('loadRoseWine').appendChild(ul);
-
-                    roseWine.forEach(function(roseWine){
-                        var li = document.createElement('li');
-                        li.className = "draggable";
-                        li.id = roseWine[3];
-                        li.draggable = true;
-                        li.ondragstart = () => drag(event);
-                        li.ondragend = () => addAmount(roseWine[4]);
-                        ul.appendChild(li);
-                        li.innerHTML = "<span class=brand>" + roseWine[0] + "</span>" +
-                            " " + "<span class='type'>" + roseWine[1] +  "</span>" +
-                            " " + "<span class='price'>" + "kr" + "</span>" +
-                            " " + "<span class=price classname=price>" + roseWine[4] + "</span>";
-                    });
-                </script>
-            </div>
-        </div>
+    <div class="dark" onclick="closeNav()">
+        <!-- Dark screen for the menu-->
     </div>
 
 </body>

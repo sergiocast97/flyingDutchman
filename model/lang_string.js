@@ -3,13 +3,14 @@
  */
   
 /* Strings */
-var language_list = {
+const language_list = {
 
     "en" : {
         "welcome"       : "Welcome",
         "welcome_text"  : "Welcome to The Flying Dutchman",
         "login"         : "Login",
         "register"      : "Register",
+        "logout"        : "Logout",
         "username"      : "username",
         "email"         : "email",
         "password"      : "password",
@@ -18,9 +19,16 @@ var language_list = {
         "favourites"    : "Favourites",
         "tray"          : "Tray",
         "beer"          : "Beer",
+        "ale"           : "Ale",
+        "stout"         : "Stout",
+        "lager"         : "Lager",
         "cider"         : "Cider",
         "spirit"        : "Spirit",
+        "whisky"        : "Whisky",
         "wine"          : "Wine",
+        "red_wine"      : "Red Wine",
+        "white_wine"    : "White Wine",
+        "rose_wine"     : "Rosé Wine",
         "checkout"      : "Checkout",
         "amount"        : "Amount:",
         "option_card"   : "Credit / Debit Card",
@@ -33,6 +41,11 @@ var language_list = {
         "confirm_pay"   : "Confirm Payment",
         "your_credit"   : "Your credit:",
         "your_tray"     : "Your Tray",
+        "pay"           : "Pay",
+        "reset"         : "Reset",
+        "confirm_order" : "Confirm order",
+        "yes"           : "Yes",
+        "no"            : "No",
     },  
 
     "sv" : {
@@ -40,6 +53,7 @@ var language_list = {
         "welcome_text"  : "Välkommen till The Flying Dutchman",
         "login"         : "Logga in",
         "register"      : "Registrera",
+        "logout"        : "Logga ut",
         "username"      : "användarnamn",
         "email"         : "e-post",
         "password"      : "lösenord",
@@ -48,9 +62,16 @@ var language_list = {
         "favourites"    : "Favoriter",
         "tray"          : "Bricka",
         "beer"          : "Öl",
+        "ale"           : "Ale",
+        "stout"         : "Stout",
+        "lager"         : "Lageröl",
         "cider"         : "Cider",
         "spirit"        : "Spritdryck",
+        "whisky"        : "Whisky",
         "wine"          : "Vin",
+        "red_wine"      : "Rödvin",
+        "white_wine"    : "Vitt Vin",
+        "rose_wine"     : "Rosévin",
         "checkout"      : "Kassa",
         "amount"        : "Belopp:",
         "option_card"   : "Kreditkort / Betalkort",
@@ -63,5 +84,10 @@ var language_list = {
         "confirm_pay"   : "Bekräfta Betalning",
         "your_credit"   : "Din kredit:",
         "your_tray"     : "Din Bricka",
+        "pay"           : "Betala",
+        "reset"         : "Återställa",
+        "confirm_order" : "Bekräfta order",
+        "yes"           : "Ja",
+        "no"            : "Nej",
     }
 };
