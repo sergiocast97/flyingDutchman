@@ -32,7 +32,7 @@ function login(){
  */
 function logout(){
     // Doesn't work
-    sessionStorage.setItem("username", null);
+    sessionStorage.clear();
     window.location = "menu";
 }
 
