@@ -266,13 +266,13 @@ button:focus{
 .trayContainer {
     width: 40%;
     height: 200%;
-    
+
     padding: 50px;
 }
 
 
 @media screen and (max-width: 1030px){
-    
+
     .trayContainer {
         height: 400%;
     }
@@ -320,7 +320,7 @@ button:focus{
     position: sticky;
     top: 50px;
     max-height: 40%;
-    
+
     padding: 25px;
     border-radius: 5px;
     background-color: #FFF;
@@ -559,7 +559,7 @@ button:focus{
 }
 
 @media screen and (max-width: 1030px){
-    
+
     .loadDrink ul li {
         width: 95%;
     }
@@ -576,10 +576,16 @@ button:focus{
     float: right;
     color: #777777;
     font-size: 90%;
+    margin-left: 5px;
 }
 
 .brand {
     font-weight: bolder;
+    font-size: 14px;
+}
+
+.type {
+    font-size: 12px;
 }
 
 /* Favourites */
@@ -805,11 +811,15 @@ color:#154360;
     border: 5px solid #FFF;
 }
 
+/*
+
 #amount {
     align-self: flex-end;
     font-size: 24px;
     padding-right: 25px;
 }
+*/
+
 
 #draggable {
     -ms-touch-action: none;
@@ -870,11 +880,11 @@ color:#154360;
 }
 
 .navOpener {
-    
+
     position: fixed;
     z-index: 1;
 
-    /* On tray 
+    /* On tray
     top: 0;
     right: 20%;
     border-radius: 0px 0px 5px 5px
@@ -890,7 +900,7 @@ color:#154360;
     background-color: #FFF;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-    
+
 }
 
 .navOpener:hover {
@@ -924,7 +934,7 @@ color:#154360;
     background-color: #EEE;
 }
 
-  
+
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     display: block;
@@ -943,7 +953,7 @@ color:#154360;
 }
 
 .sidenav_login {
-    padding: 5px 30px;    
+    padding: 5px 30px;
 }
 
 .sidenav_user {

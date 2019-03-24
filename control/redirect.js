@@ -1,5 +1,9 @@
 // Check the current location
 //alert($(location).attr("pathname").split('/')[2]);
+
+
+
+
 switch( $(location).attr("pathname").split('/')[2] ){
 
     case "register":
@@ -30,3 +34,5 @@ switch( $(location).attr("pathname").split('/')[2] ){
     default: window.location.replace("menu");
 
 }
+
+
