@@ -1,13 +1,21 @@
 
 function payCredit(amount){
     var username = sessionStorage.getItem("username");
+    //alert(username);
     var credit = getBalance();
+    //alert(credit)
     var newCredit = credit - amount;
+    //alert(newCredit);
 
     if (newCredit >= 0){
         console.log(newCredit);
         changeBalance(username, newCredit);
         console.log("payment successfull");
+
+        //alert("payment successful");
+
+        $('.dark').css({'visibility': 'visible','opacity': '1',});
+        $('.popup_panel').css({'visibility': 'visible'});
     } else {
         alert("Not enough credit, choose another payment");
     }

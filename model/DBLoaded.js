@@ -894,7 +894,7 @@ var DB = {
         },
         {
             "user_id": "666",
-            "creditSEK" : "500"
+            "creditSEK" : "9999"
         },
         {
             "user_id": "28",

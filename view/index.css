@@ -1083,6 +1083,7 @@ color:#154360;
 }
 
 .dark {
+    z-index: 5;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1091,4 +1092,26 @@ color:#154360;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 0.5s;
     visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_panel {
+    width: 20%;
+    height: 15%;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup_panel button {
+    width: 60%;
 }

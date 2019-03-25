@@ -48,6 +48,8 @@ const language_list = {
         "confirm_order" : "Confirm order",
         "yes"           : "Yes",
         "no"            : "No",
+        "pay_success"   : "Successful Payment",
+        "go_back"       : "Go back to Menu",
     },  
 
     "sv" : {
@@ -93,5 +95,7 @@ const language_list = {
         "confirm_order" : "Bekräfta order",
         "yes"           : "Ja",
         "no"            : "Nej",
+        "pay_success"   : "Framgångsrik betalning",
+        "go_back"       : "Gå tillbaka till Menyn",
     }
 };
