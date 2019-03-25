@@ -40,23 +40,33 @@ function logout(){
  * Register a new user on the databse
  */
 function register(){
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    
+    // Getting all the user details
+    let username = document.getElementById("username").value;
+    let name = document.getElementById("name").value;
+    let surname = document.getElementById("surname").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let userId = Math.max(1000, 1001); // Get highest ID
 
-    var user = userDetails(username);
+    // Adding user to database
+    DB.users.push({
+        user_id         : userId,
+        credentials     : "0",
+        password        : password,
+        username        : username,
+        first_name      : name,
+        last_name       : surname,
+        email           : email,
+        phone           : "-",
+    });
 
+    // Adding credit to user
+    DB.account.push({
+        user_id         : userId,
+        creditSEK       : "0",
+    });
 
-        // Check if users exists, if not, create new user
-
-        if (user.includes(username) && user.includes(password)) {
-            sessionStorage.setItem("username", user[1]);
-            window.location = "menu";
-
-        } else {
-            alert("Login not successful");
-            window.location = "register";
-
-        }
+    login();
 
 }

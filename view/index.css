@@ -105,6 +105,7 @@ button:focus{
 .panel {
     align-self: center;
     margin: 0 auto;
+    max-width: 300px;
 
     background-color: #FFF;
     border-radius: 5px;
@@ -123,6 +124,20 @@ button:focus{
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.panelElement input {
+    width: 100%;
+}
+
+.panelElement #name {
+    width: 45%;
+    margin-right: 5px;
+}
+
+.panelElement #surname {
+    width: 45%;
+    margin-left: 5px;
 }
 
 .floatLanguage {
@@ -395,7 +410,7 @@ button:focus{
 
 .tray-bottom{
     overflow-y: auto;
-    background: #EEEEEE;
+    background: #FFF;
     padding: 25px;
     margin-top: 20px;
     position: -webkit-sticky;
