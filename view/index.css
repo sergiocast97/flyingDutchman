@@ -1083,7 +1083,7 @@ color:#154360;
 }
 
 .dark {
-    z-index: 5;
+    z-index: 1;
     position: fixed;
     top: 0;
     bottom: 0;
